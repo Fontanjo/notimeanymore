@@ -4,8 +4,6 @@ using UnityEngine;
 
 
 
-
-
 public class CameraController : MonoBehaviour
 {
 
@@ -18,6 +16,9 @@ public class CameraController : MonoBehaviour
 
     float time = 0f;
 
+    private GameObject levelGeneratorObj;
+    private LevelGenerator levelGenerator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +30,14 @@ public class CameraController : MonoBehaviour
         //leftMovement = new Vector3(-6, 3, 5);
         rightMovement = LevelGenerator.rightMovement;
         leftMovement = LevelGenerator.leftMovement;
-        
+
         // Create target coordinates
         UpdateTargets();
+
+        // Get reference to level generator
+        // Ideally this should not be necessary, refactor level generator script into singleton if possible
+        levelGeneratorObj = GameObject.Find("LevelGenerator");
+        levelGenerator = levelGeneratorObj.GetComponent<LevelGenerator>();
 
         // Signal that the camera is ready to move
         canMove = true;
@@ -75,8 +81,43 @@ public class CameraController : MonoBehaviour
             LevelGenerator.MoveRootNodeLeft();
         if (dir == "right")
             LevelGenerator.MoveRootNodeRight();
+
+        // Zoom on the selected image
+        ZoomIn();
+
+        // Play situation
+        PlayTile();
+
+        // Go back to map view
+        ZoomOut();
+
         // Allow to move again
         canMove = true;
+    }
+
+
+    /// Zoom on the selected image
+    private void ZoomIn()
+    {
+        Debug.Log("Zoom in");
+    }
+
+    /// Zoom out of the selected image
+    private void ZoomOut()
+    {
+        Debug.Log("Zoom back to map");
+    }
+
+    /// Play on the current tile (root node)
+    /// From the tile itself, get new objects and place them
+    /// Add click listener and game logic
+    private void PlayTile()
+    {
+        Debug.Log("Play on tile " + LevelGenerator.GetRootNode().imageObject.name);
+
+        // Instantiate new dialogue
+        string[] sentences = { "Item1", "Item2", "Item3" };
+        levelGenerator.InstantiateDialogueBox(sentences);
     }
 
     private void UpdateTargets()

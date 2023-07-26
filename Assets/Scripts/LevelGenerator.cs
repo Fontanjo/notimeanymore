@@ -14,13 +14,21 @@ public class LevelGenerator : MonoBehaviour
     [Tooltip("The object under which all instantiated images will be")]
     public Transform parentGameObject;
 
+    [Space(10)]
+    [Tooltip("The object under which all instantiated UI elements will be")]
+    public Transform canvasParentObject;
+
 
     [Tooltip("The number of layers visible at each time")]
     [Range(2,10)]
     public int numberOfLayers = 3;
 
+    [Space(10)]
+    public GameObject dialogueboxPrefab;
+
+    [Space(10)]
     // Position of the first image, probably   new Vector3(0, 0, 0)
-    private Vector3 initialImagePosition = new Vector3(0, -3, 0);
+    public static Vector3 initialImagePosition = new Vector3(0, -3, 0);
     public static Vector3 leftMovement = new Vector3(-11, 4, 10);
     public static Vector3 rightMovement = new Vector3(11, 4, 10);
 
@@ -185,5 +193,19 @@ public class LevelGenerator : MonoBehaviour
     {
         // Delete object from scene
         Destroy(node.imageObject);
+    }
+
+    // Instantiate a new dialogue box
+    public void InstantiateDialogueBox(string[] sentences)
+    {
+        dialogueboxPrefab.GetComponent<Dialogue>().lines = sentences;
+        GameObject db = Instantiate(dialogueboxPrefab, new Vector3(100,225,0), Quaternion.identity);
+
+        // Move it in the ui canvas
+        db.transform.parent = canvasParentObject;
+        RectTransform rectT = db.GetComponent<RectTransform>();
+        Debug.Log(rectT.position);
+        //Debug.Log(db.name);
+        //db.GetComponent<Dialogue>().lines = sentences;
     }
 }
