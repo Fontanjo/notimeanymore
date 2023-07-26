@@ -124,4 +124,66 @@ public class LevelGenerator : MonoBehaviour
     {
         return rootNode;
     }
+
+    // Update the root node, and delete unreachable tiles
+    public static void MoveRootNodeRight()
+    {
+        // Delete all the noded on the rightmost path
+        ImageNode current = rootNode.leftChild;
+        while (current != null)
+        {
+            // Save ref to old root
+            ImageNode toDelete = current;
+
+            // Update root node
+            current = current.leftChild;
+
+            Debug.Log("Delete " + toDelete.imageObject.name);
+
+            DeleteNode(toDelete);
+        }
+
+        // Save ref to old root
+        ImageNode tempRootRef = rootNode;
+
+        // Update root node
+        rootNode = rootNode.rightChild;
+
+        DeleteNode(tempRootRef);
+    }
+
+    // Update the root node, and delete unreachable tiles
+    public static void MoveRootNodeLeft()
+    {
+        // Delete all the noded on the rightmost path
+        ImageNode current = rootNode.rightChild;
+        while (current != null)
+        {
+            // Save ref to old root
+            ImageNode toDelete = current;
+
+            // Update root node
+            current = current.rightChild;
+
+            Debug.Log("Delete " + toDelete.imageObject.name);
+
+            DeleteNode(toDelete);
+        }
+
+        // Save ref to old root
+        ImageNode tempRootRef = rootNode;
+
+        // Update root node
+        rootNode = rootNode.leftChild;
+
+        DeleteNode(tempRootRef);
+    }
+
+
+    // Delete node fro list, and object from scene
+    private static void DeleteNode(ImageNode node)
+    {
+        // Delete object from scene
+        Destroy(node.imageObject);
+    }
 }

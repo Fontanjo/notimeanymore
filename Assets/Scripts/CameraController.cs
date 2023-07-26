@@ -40,6 +40,8 @@ public class CameraController : MonoBehaviour
     {
         // Move camera
         StartCoroutine(_moveTo(targetRight));
+        // Update root node
+        LevelGenerator.MoveRootNodeRight();
     }
 
     // Move to the sprite on the left
@@ -47,6 +49,8 @@ public class CameraController : MonoBehaviour
     {
         // Move camera
         StartCoroutine(_moveTo(targetLeft));  
+        // Update root node
+        LevelGenerator.MoveRootNodeLeft();
     }
 
 
