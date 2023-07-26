@@ -34,10 +34,10 @@ public class SpriteResizer : MonoBehaviour
         float scaleY = targetHeightInUnits / spriteRenderer.bounds.size.y;
 
         
-        Debug.Log("Target " + targetWidthInUnits);
+        /* Debug.Log("Target " + targetWidthInUnits);
         Debug.Log("Actual " + spriteRenderer.bounds.size.x);
         Debug.Log("Scale "+ scaleX);
-
+ */
 
         // Apply the final scale to the sprite
         transform.localScale = new Vector3(scaleX, scaleY, 1f);

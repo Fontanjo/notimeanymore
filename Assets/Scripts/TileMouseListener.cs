@@ -72,6 +72,6 @@ public class TileMouseListener : MonoBehaviour
     // Return true if this tile can be selected and the camera can move to it
     public bool Selectable()
     {
-        return (cameraController.canMove && ImageNode.GetTileDepth(gameObject) == 1);
+        return (cameraController.canMove && ImageNode.GetTileDepth(gameObject) == 1 && LevelVariables.Instance().CanMove());
     }
 }
