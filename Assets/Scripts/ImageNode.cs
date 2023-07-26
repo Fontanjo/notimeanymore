@@ -50,6 +50,35 @@ public class ImageNode
         return GetPath(LevelGenerator.GetRootNode(), targetobject);
     }
 
+    /// Get the depth in the scene of a tile
+    /// 0 if it's in the first plane
+    /// 1 if it's in the second plane (thus selectable)
+    /// 2 if it's behind second plane
+    /// -1 if not on the path from root node
+    public static int GetTileDepth(GameObject targetobject)
+    {
+        // Get root node
+        ImageNode rootNode = LevelGenerator.GetRootNode();
+
+        // If the root and the target already correspond
+        if (rootNode.imageObject == targetobject)
+            return 0;
+
+        // If found as left child
+        if (rootNode.leftChild.imageObject == targetobject)
+            return 1;
+
+            // If found as left child
+        if (rootNode.rightChild.imageObject == targetobject)
+            return 1;
+
+        if (RecursiveTraverse(rootNode.rightChild, targetobject) || RecursiveTraverse(rootNode.leftChild, targetobject))
+            return 2;
+
+        // If not found neither left not right
+        return -1;
+    }
+
     // Recursivly search through the tree
     private static bool RecursiveTraverse(ImageNode node, GameObject targetobject)
     {

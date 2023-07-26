@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spriteMouseListener : MonoBehaviour
+public class TileMouseListener : MonoBehaviour
 {
     // Sprite Renderer component of the object
     private SpriteRenderer sr;
@@ -26,15 +26,10 @@ public class spriteMouseListener : MonoBehaviour
         onMouseOverCol = new Color(origCol.r * 0.8f, origCol.g * 0.8f, origCol.b * 0.8f, origCol.a);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnMouseDown(){
         //Debug.Log(sr.color);
-        if (cameraController.canMove)
+        if (Selectable())
         {
             string direction = ImageNode.GetPath(gameObject);
             
@@ -65,11 +60,18 @@ public class spriteMouseListener : MonoBehaviour
     }
 
     void OnMouseEnter(){
-        if (cameraController.canMove)
+        // Only make selectable when 
+        if (Selectable())
             sr.color = onMouseOverCol;
     }
 
     void OnMouseExit(){
         sr.color = origCol;
+    }
+
+    // Return true if this tile can be selected and the camera can move to it
+    public bool Selectable()
+    {
+        return (cameraController.canMove && ImageNode.GetTileDepth(gameObject) == 1);
     }
 }
