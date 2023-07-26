@@ -39,23 +39,19 @@ public class CameraController : MonoBehaviour
     public void MoveRight()
     {
         // Move camera
-        StartCoroutine(_moveTo(targetRight));
-        // Update root node
-        LevelGenerator.MoveRootNodeRight();
+        StartCoroutine(_moveTo(targetRight, "right"));
     }
 
     // Move to the sprite on the left
     public void MoveLeft()
     {
         // Move camera
-        StartCoroutine(_moveTo(targetLeft));  
-        // Update root node
-        LevelGenerator.MoveRootNodeLeft();
+        StartCoroutine(_moveTo(targetLeft, "left"));  
     }
 
 
     // Actual movement coroutine
-    private IEnumerator _moveTo(Vector3 targetPos)
+    private IEnumerator _moveTo(Vector3 targetPos, string dir)
     {
         // Block additional movement
         canMove = false;
@@ -72,6 +68,11 @@ public class CameraController : MonoBehaviour
         }
         // Update targets
         UpdateTargets(); 
+        // Update root node and delete deprecated objects
+        if (dir == "left")
+            LevelGenerator.MoveRootNodeLeft();
+        if (dir == "right")
+            LevelGenerator.MoveRootNodeRight();
         // Allow to move again
         canMove = true;
     }

@@ -20,7 +20,7 @@ public class LevelGenerator : MonoBehaviour
     public int numberOfLayers = 3;
 
     // Position of the first image, probably   new Vector3(0, 0, 0)
-    private Vector3 initialImagePosition = new Vector3(0, 0, -1);
+    private Vector3 initialImagePosition = new Vector3(0, -3, 0);
     private Vector3 leftMovement = new Vector3(-6, 3, 20);
     private Vector3 rightMovement = new Vector3(6, 3, 20);
 
@@ -138,7 +138,7 @@ public class LevelGenerator : MonoBehaviour
             // Update root node
             current = current.leftChild;
 
-            Debug.Log("Delete " + toDelete.imageObject.name);
+            //Debug.Log("Delete " + toDelete.imageObject.name);
 
             DeleteNode(toDelete);
         }
@@ -165,7 +165,7 @@ public class LevelGenerator : MonoBehaviour
             // Update root node
             current = current.rightChild;
 
-            Debug.Log("Delete " + toDelete.imageObject.name);
+            //Debug.Log("Delete " + toDelete.imageObject.name);
 
             DeleteNode(toDelete);
         }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3456066461937047496}
   - component: {fileID: -2857028857115593261}
   - component: {fileID: -7143698661183014530}
+  - component: {fileID: 913942523103835036}
   m_Layer: 0
   m_Name: forest
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3456066461937047498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6, y: 3, z: 20}
-  m_LocalScale: {x: 1.875, y: 1.175, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,3 +125,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.4, y: 4.27}
   m_EdgeRadius: 0
+--- !u!114 &913942523103835036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3456066461937047498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7a69e1f41795573b3b8864b28a6071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
