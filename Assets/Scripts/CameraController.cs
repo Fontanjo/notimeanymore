@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
 {
 
     Transform cameraTransform; 
-    Vector3 rightMovement, leftMovement;
+    private Vector3 rightMovement, leftMovement;
     Vector3 targetRight, targetLeft;
     public float duration = 20f;
 
@@ -25,9 +25,11 @@ public class CameraController : MonoBehaviour
         cameraTransform = Camera.main.gameObject.transform;
 
         // Assign movement to get to the new sprite
-        rightMovement = new Vector3(6, 3, 20);
-        leftMovement = new Vector3(-6, 3, 20);
-
+        //rightMovement = new Vector3(6, 3, 5);
+        //leftMovement = new Vector3(-6, 3, 5);
+        rightMovement = LevelGenerator.rightMovement;
+        leftMovement = LevelGenerator.leftMovement;
+        
         // Create target coordinates
         UpdateTargets();
 

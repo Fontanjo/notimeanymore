@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpriteResizer : MonoBehaviour
 {   
-    private float targetWidthInUnits = 12f; // The target width in world units
-    private float targetHeightInUnits = 6f; // The target height in world units
+    private float targetWidthInUnits = 20f; // The target width in world units
+    private float targetHeightInUnits = 8f; // The target height in world units
 
 
     SpriteRenderer sr;

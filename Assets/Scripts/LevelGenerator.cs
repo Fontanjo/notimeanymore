@@ -16,13 +16,13 @@ public class LevelGenerator : MonoBehaviour
 
 
     [Tooltip("The number of layers visible at each time")]
-    [Range(2,4)]
+    [Range(2,10)]
     public int numberOfLayers = 3;
 
     // Position of the first image, probably   new Vector3(0, 0, 0)
     private Vector3 initialImagePosition = new Vector3(0, -3, 0);
-    private Vector3 leftMovement = new Vector3(-6, 3, 20);
-    private Vector3 rightMovement = new Vector3(6, 3, 20);
+    public static Vector3 leftMovement = new Vector3(-11, 4, 10);
+    public static Vector3 rightMovement = new Vector3(11, 4, 10);
 
 
     // !!!!!!!! static field !!!!!!!!!!
