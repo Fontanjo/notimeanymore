@@ -13,12 +13,7 @@ public class TileController : MonoBehaviour
         DeactivateEvent1();
         DeactivateEvent2();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void ActivateEvent1()
     {
@@ -39,4 +34,5 @@ public class TileController : MonoBehaviour
     {
         event2.SetActive(false);
     }
+
 }

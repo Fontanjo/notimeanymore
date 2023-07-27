@@ -83,25 +83,27 @@ public class CameraController : MonoBehaviour
         if (dir == "right")
             LevelGenerator.MoveRootNodeRight();
 
+
+        // Get tile controller
+        TileController tc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
+
         // Zoom on the selected image
-        ZoomIn();
+        ZoomIn(tc);
 
         // Play situation
         PlayTile();
 
-        // Go back to map view
-        ZoomOut();
+        /* // Go back to map view
+        ZoomOut(); */
 
-        // Allow to move again
-        canMove = true;
+        
     }
 
 
     /// Zoom on the selected image
-    private void ZoomIn()
+    private void ZoomIn(TileController tc)
     {
         Debug.Log("Zoom in");
-        TileController tc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
 
         if (tc == null)
         {
@@ -115,9 +117,14 @@ public class CameraController : MonoBehaviour
     }
 
     /// Zoom out of the selected image
-    private void ZoomOut()
+    public void ZoomOut()
     {
         Debug.Log("Zoom back to map");
+
+        // Allow to move again
+        canMove = true;
+
+        LevelVariables.Instance().AllowMovement();
     }
 
     /// Play on the current tile (root node)
@@ -129,7 +136,13 @@ public class CameraController : MonoBehaviour
 
         // Instantiate new dialogue
         string[] sentences = { "Item1", "Item2", "Item3" };
-        levelGenerator.NewDialogueBox(sentences);
+        string[] allowAfter = { "event" };
+        levelGenerator.NewDialogueBox(sentences, allowAfter);
+
+        // Allow to select one element
+        //LevelVariables.Instance().AllowSelectEvent();
+
+
     }
 
     private void UpdateTargets()

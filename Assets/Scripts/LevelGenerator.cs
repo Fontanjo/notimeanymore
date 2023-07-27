@@ -274,9 +274,9 @@ public class LevelGenerator : MonoBehaviour
     // Start a new dialogue
     // Is in this script to have a single point to handle all the level
     // And a single object to which add all the objects in the editor
-    public void NewDialogueBox(string[] sentences)
+    public void NewDialogueBox(string[] sentences, string[] allowAfter)
     {
         // Start new dialogue
-        dialogueScript.NewDialogue(sentences);
+        dialogueScript.NewDialogue(sentences, allowAfter);
     }
 }

@@ -489,6 +489,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 136922027}
     m_Modifications:
+    - target: {fileID: 200411036, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
+      propertyPath: textSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 200411036, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
+      propertyPath: allowAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 200411036, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
+      propertyPath: allowAfter.Array.data[0]
+      value: movement
+      objectReference: {fileID: 0}
     - target: {fileID: 7487473428765220048, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -9,12 +9,17 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
+
+
+    public string[] allowAfter;
+
     private int index;
 
     // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
+        // Start first dialogue
         StartDialogue();
     }
 
@@ -38,7 +43,9 @@ public class Dialogue : MonoBehaviour
     void StartDialogue()
     {
         // Block movement to until end of dialogue
+        // Block select event until end of dialogue
         LevelVariables.Instance().BlockMovement();
+        LevelVariables.Instance().BlockSelectEvent();
 
         index = 0;
         StartCoroutine(TypeLine());
@@ -66,15 +73,17 @@ public class Dialogue : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            // Allow movement again
-            LevelVariables.Instance().AllowMovement();
+            AllowActions();
         }
     }
 
-    public void NewDialogue(string[] newLines)
+    public void NewDialogue(string[] newLines, string[] newAllowAfter)
     {
         // Update lines
         lines = newLines;
+
+        // Update actions to allow after dialogue
+        allowAfter = newAllowAfter;
         
         // Clear text
         textComponent.text = string.Empty;
@@ -85,4 +94,19 @@ public class Dialogue : MonoBehaviour
         // Start
         StartDialogue();
     }
+
+    // Unlock actions that were locked during dialogue
+    private void AllowActions()
+    {
+        foreach (string s in allowAfter)
+        {
+            if (s.ToLower() == "movement")
+                LevelVariables.Instance().AllowMovement();
+
+            if (s.ToLower() == "event")
+                LevelVariables.Instance().AllowSelectEvent();
+            //Debug.Log(s);
+        }
+    }
+
 }
