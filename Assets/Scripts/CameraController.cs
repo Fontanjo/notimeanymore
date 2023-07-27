@@ -18,6 +18,7 @@ public class CameraController : MonoBehaviour
 
     private GameObject levelGeneratorObj;
     private LevelGenerator levelGenerator;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -117,7 +118,7 @@ public class CameraController : MonoBehaviour
 
         // Instantiate new dialogue
         string[] sentences = { "Item1", "Item2", "Item3" };
-        levelGenerator.InstantiateDialogueBox(sentences);
+        levelGenerator.NewDialogueBox(sentences);
     }
 
     private void UpdateTargets()

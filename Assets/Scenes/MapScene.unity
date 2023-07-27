@@ -299,7 +299,7 @@ MonoBehaviour:
   parentGameObject: {fileID: 650129640}
   canvasParentObject: {fileID: 136922027}
   numberOfLayers: 4
-  dialogueboxPrefab: {fileID: 7487473428765220051, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
+  dialogueboxObject: {fileID: 1410113544}
 --- !u!4 &959722417
 Transform:
   m_ObjectHideFlags: 0
@@ -414,6 +414,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 20
   canMove: 0
+--- !u!1 &1410113544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7487473428765220051, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
+  m_PrefabInstance: {fileID: 1473119017}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1473119017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -491,7 +496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7487473428765220048, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 225
+      value: 832
       objectReference: {fileID: 0}
     - target: {fileID: 7487473428765220048, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
