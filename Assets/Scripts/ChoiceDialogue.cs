@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
 
 public class ChoiceDialogue : MonoBehaviour
@@ -99,19 +101,18 @@ public class ChoiceDialogue : MonoBehaviour
         StartDialogue();
     }
 
+    private UnityAction m_MyFirstAction;
+
     // Unlock actions that were locked during dialogue
     private void AllowActions()
     {
         // Show choices
         ShowOptions();
 
-        
-
-        // Zoom out (continue game)
-        // This should be done by pressing one of the options
-        //gameObject.SetActive(false);
-        //cameraController.ZoomOut();
-        
+        m_MyFirstAction += Leave;
+        c1text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
+        c2text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
+        c3text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
     }
 
     private void HideOptions()
@@ -122,16 +123,25 @@ public class ChoiceDialogue : MonoBehaviour
         c2text.gameObject.transform.parent.gameObject.SetActive(false);
         c3text.text = "";
         c3text.gameObject.transform.parent.gameObject.SetActive(false);
+
+
     }
 
     private void ShowOptions()
     {
-        c1text.text = "";
+        c1text.text = "Choice number 1";
         c1text.gameObject.transform.parent.gameObject.SetActive(true);
-        c2text.text = "";
+        c2text.text = "Choice number 2";
         c2text.gameObject.transform.parent.gameObject.SetActive(true);
-        c3text.text = "";
+        c3text.text = "Choice number 3";
         c3text.gameObject.transform.parent.gameObject.SetActive(true);
+    }
+
+    private void Leave()
+    {
+        Debug.Log("Button clicked!");
+        gameObject.SetActive(false);
+        cameraController.ZoomOut();
     }
 
 }

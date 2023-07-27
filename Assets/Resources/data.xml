@@ -5,54 +5,177 @@
   </envName>
   <dialogue>
     <text>
-      Je pénétrai prudemment entre les troncs noueux de l'épaisse forêt. Les branches craquant sous mes pas trahissaient ma présence et bientôt j'aperçus, entre les feuillages, deux yeux globuleux qui m'observaient.
+    <!-- Entry dialogue with initial choice -->
     </text> 
   </dialogue>
-  <choice1>
-    <text>
-      Serrant mon bâton, je voulu ensevelir la créature dans un sol mouvant !
-    </text>
-    <difficulty>
-      medium
-    </difficulty>
-    <skillprice>
-      <type>
-        corps
-      </type>
-      <amount>
-        1
-      </amount>
-    </skillprice>
-    <requiredAchievement>
-      <!-- AchievementID -->
-    </requiredAchievement>
-    <goodOutcome>
-      <gainedachievement> 
-        <!-- This might be an achievement you get -->
-      </gainedachievement>
-      <gainedObject> 
-        <!-- ItemID -->
-      </gainedObject>
-      <skillprice>
-        <type>
-        </type>
-        <amount>
-        </amount>
-      </skillprice>
-    </goodOutcome>
-    <badOutcome>
-      <gainedachievement> 
-        <!-- This might be an achievement you get -->
-      </gainedachievement>
-      <lostObject> 
-        <!-- True or False -->
-      </lostObject>
-      <skillprice>
-        <type>
-        </type>
-        <amount>
-        </amount>
-      </skillprice>
-    </badOutcome>
-  </choice1>     
+    <choice1>
+        <text>
+            <!-- Choice 1 Text -->
+        </text>
+        <difficulty>
+        </difficulty>
+        <skillprice>
+            <type>
+            </type>
+            <amount>
+            </amount>
+        </skillprice>
+        <requiredQuestStage>
+            <!-- This is the stage level of the quest required for the choice to be available -->
+        </requiredQuestStage>
+        <goodOutcome>
+            <dialogue>
+                <text>
+                    <!-- Good outcome Text -->
+                </text>
+            </dialogue>
+            <gainedachievement> 
+                <!-- Gained AchievementID -->
+            </gainedachievement>
+            <gainedObject> 
+                <!-- Gained ObjectID -->
+            </gainedObject>
+            <skillprice>
+                <type>
+                </type>
+                <amount>
+                </amount>
+            </skillprice>
+        </goodOutcome>
+        <badOutcome>
+            <dialogue>
+                <text>
+                    <!-- Bad outcome Text -->
+                </text>
+            </dialogue>
+            <gainedachievement> 
+                <!-- This might be an achievement you get -->
+            </gainedachievement>
+            <setQuestStage>
+                <!-- This is the evolution of the questline -->
+            </setQuestStage>
+            <lostObject> 
+            </lostObject>
+            <skillprice>
+                <type>
+                </type>
+                <amount>
+                </amount>
+            </skillprice>
+        </badOutcome>
+    </choice1>
+<!-- Choice 2 starts here -->
+    <choice2>
+        <text>
+            <!-- Choice 2 Text -->
+        </text>
+        <difficulty>
+        </difficulty>
+        <skillprice>
+            <type>
+            </type>
+            <amount>
+            </amount>
+        </skillprice>
+        <requiredQuestStage>
+            <!-- This is the stage level of the quest required for the choice to be available -->
+        </requiredQuestStage>
+        <goodOutcome>
+            <dialogue>
+                <text>
+                    <!-- Good outcome Text -->
+                </text>
+            </dialogue>
+            <gainedachievement> 
+                <!-- Gained AchievementID -->
+            </gainedachievement>
+            <gainedObject> 
+                <!-- Gained ObjectID -->
+            </gainedObject>
+            <skillprice>
+                <type>
+                </type>
+                <amount>
+                </amount>
+            </skillprice>
+        </goodOutcome>
+        <badOutcome>
+            <dialogue>
+                <text>
+                    <!-- Bad outcome Text -->
+                </text>
+            </dialogue>
+            <gainedachievement> 
+                <!-- This might be an achievement you get -->
+            </gainedachievement>
+            <setQuestStage>
+                <!-- This is the evolution of the questline -->
+            </setQuestStage>
+            <lostObject> 
+            </lostObject>
+            <skillprice>
+                <type>
+                </type>
+                <amount>
+                </amount>
+            </skillprice>
+        </badOutcome>
+    </choice2>
+<!-- Choice 3 starts here -->
+    <choice3>
+        <text>
+            <!-- Choice 3 Text -->
+        </text>
+        <difficulty>
+        </difficulty>
+        <skillprice>
+            <type>
+            </type>
+            <amount>
+            </amount>
+        </skillprice>
+        <requiredQuestStage>
+            <!-- This is the stage level of the quest required for the choice to be available -->
+        </requiredQuestStage>
+        <goodOutcome>
+            <dialogue>
+                <text>
+                    <!-- Good outcome Text -->
+                </text>
+            </dialogue>
+            <gainedachievement> 
+                <!-- Gained AchievementID -->
+            </gainedachievement>
+            <gainedObject> 
+                <!-- Gained ObjectID -->
+            </gainedObject>
+            <skillprice>
+                <type>
+                </type>
+                <amount>
+                </amount>
+            </skillprice>
+        </goodOutcome>
+        <badOutcome>
+            <dialogue>
+                <text>
+                    <!-- Bad outcome Text -->
+                </text>
+            </dialogue>
+            <gainedachievement> 
+                <!-- This might be an achievement you get -->
+            </gainedachievement>
+            <setQuestStage>
+                <!-- This is the evolution of the questline -->
+            </setQuestStage>
+            <lostObject> 
+            </lostObject>
+            <skillprice>
+                <type>
+                </type>
+                <amount>
+                </amount>
+            </skillprice>
+        </badOutcome>
+    </choice3>
 </env>
