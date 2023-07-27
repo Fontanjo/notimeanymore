@@ -75,6 +75,8 @@ public class CameraController : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+       
+
         // Update targets
         UpdateTargets(); 
         // Update root node and delete deprecated objects
@@ -83,9 +85,15 @@ public class CameraController : MonoBehaviour
         if (dir == "right")
             LevelGenerator.MoveRootNodeRight();
 
+        
 
         // Get tile controller
         TileController tc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
+
+        // Show arrival animation
+        tc.ActivateWizard();
+        tc.GetWizardAnimator().SetTrigger("IsMoving");
+        yield return new WaitForSeconds(1);
 
         // Zoom on the selected image
         ZoomIn(tc);
@@ -111,7 +119,6 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            tc.ActivateWizard();
             tc.ActivateEvent1();
             tc.ActivateEvent2();
         }
