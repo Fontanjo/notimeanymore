@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 7487473428765220048}
   - component: {fileID: 7487473428765220055}
   - component: {fileID: 7487473428765220054}
-  - component: {fileID: 200411036}
+  - component: {fileID: 7552363284879467569}
+  - component: {fileID: 1410113548}
+  - component: {fileID: 1410113552}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -36,10 +38,10 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: -200, y: -600}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 832}
+  m_SizeDelta: {x: -200, y: 333}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &7487473428765220055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -78,7 +80,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &200411036
+--- !u!114 &7552363284879467569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,10 +94,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 7487473429023030815}
   lines:
-  - This is the first line that will appear
-  - Second line
-  - Last line
+  - Hello in the game
   textSpeed: 0
+  allowAfter: []
+--- !u!114 &1410113548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7487473428765220051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 943623808
+      Data2: 1095517240
+      Data3: 135357599
+      Data4: -1967629258
+    Path: event:/Loop 1
+  Event: 
+  PlayEvent: 1
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1410113552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7487473428765220051}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 433174123
+      Data2: 1161994609
+      Data3: 1111033993
+      Data4: 1963241641
+    Path: event:/Harp 1
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7487473429023030809
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The first line will be more or less this long I think
+  m_text: Choice dialogue box
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b99be2fc1a34cc681b0fefdc2ce42eab, type: 2}
   m_sharedMaterial: {fileID: -329816560493787884, guid: b99be2fc1a34cc681b0fefdc2ce42eab, type: 2}

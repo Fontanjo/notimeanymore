@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<env>
+  <envName>
+    forest1
+  </envName>
+  <dialogue>
+    <text>
+      Je pénétrai prudemment entre les troncs noueux de l'épaisse forêt. Les branches craquant sous mes pas trahissaient ma présence et bientôt j'aperçus, entre les feuillages, deux yeux globuleux qui m'observaient.
+    </text> 
+  </dialogue>
+  <choice1>
+    <text>
+      Serrant mon bâton, je voulu ensevelir la créature dans un sol mouvant !
+    </text>
+    <difficulty>
+      medium
+    </difficulty>
+    <skillprice>
+      <type>
+        corps
+      </type>
+      <amount>
+        1
+      </amount>
+    </skillprice>
+    <requiredAchievement>
+      <!-- AchievementID -->
+    </requiredAchievement>
+    <goodOutcome>
+      <gainedachievement> 
+        <!-- This might be an achievement you get -->
+      </gainedachievement>
+      <gainedObject> 
+        <!-- ItemID -->
+      </gainedObject>
+      <skillprice>
+        <type>
+        </type>
+        <amount>
+        </amount>
+      </skillprice>
+    </goodOutcome>
+    <badOutcome>
+      <gainedachievement> 
+        <!-- This might be an achievement you get -->
+      </gainedachievement>
+      <lostObject> 
+        <!-- True or False -->
+      </lostObject>
+      <skillprice>
+        <type>
+        </type>
+        <amount>
+        </amount>
+      </skillprice>
+    </badOutcome>
+  </choice1>     
+</env>

@@ -5,7 +5,7 @@ using TMPro;
 
 public class ChoiceDialogue : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI textComponent, c1text, c2text, c3text;
     public string[] lines;
     public float textSpeed;
 
@@ -44,6 +44,7 @@ public class ChoiceDialogue : MonoBehaviour
 
     void StartDialogue()
     {
+        Debug.Log("Start choice dialogue");
         // Block movement to until end of dialogue
         // Block select event until end of dialogue
         LevelVariables.Instance().BlockMovement();
@@ -73,7 +74,7 @@ public class ChoiceDialogue : MonoBehaviour
         }
         else
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
 
             AllowActions();
         }
@@ -83,6 +84,10 @@ public class ChoiceDialogue : MonoBehaviour
     {
         // Update lines
         lines = newLines;
+
+        // Hide options panels
+        HideOptions();
+        
         
         // Clear text
         textComponent.text = string.Empty;
@@ -97,12 +102,32 @@ public class ChoiceDialogue : MonoBehaviour
     // Unlock actions that were locked during dialogue
     private void AllowActions()
     {
-        // Allow movement
-        //LevelVariables.Instance().AllowMovement();
+        // Show choices
+        ShowOptions();
 
         // Zoom out (continue game)
-        cameraController.ZoomOut();
+        //cameraController.ZoomOut();
         
+    }
+
+    private void HideOptions()
+    {
+        c1text.text = "";
+        c1text.gameObject.transform.parent.gameObject.SetActive(false);
+        c2text.text = "";
+        c2text.gameObject.transform.parent.gameObject.SetActive(false);
+        c3text.text = "";
+        c3text.gameObject.transform.parent.gameObject.SetActive(false);
+    }
+
+    private void ShowOptions()
+    {
+        c1text.text = "";
+        c1text.gameObject.transform.parent.gameObject.SetActive(true);
+        c2text.text = "";
+        c2text.gameObject.transform.parent.gameObject.SetActive(true);
+        c3text.text = "";
+        c3text.gameObject.transform.parent.gameObject.SetActive(true);
     }
 
 }
