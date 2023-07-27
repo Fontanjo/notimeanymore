@@ -11,6 +11,9 @@ public class EventMouseListener : MonoBehaviour
 
     private CameraController cameraController;
 
+    private GameObject levelGeneratorObj;
+    private LevelGenerator levelGenerator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,11 @@ public class EventMouseListener : MonoBehaviour
 
         // Generate color to apply when mouse over
         onMouseOverCol = new Color(origCol.r * 0.8f, origCol.g * 0.8f, origCol.b * 0.8f, origCol.a);
+
+        // Get reference to level generator
+        // Ideally this should not be necessary, refactor level generator script into singleton if possible
+        levelGeneratorObj = GameObject.Find("LevelGenerator");
+        levelGenerator = levelGeneratorObj.GetComponent<LevelGenerator>();
     }
 
 
@@ -45,7 +53,7 @@ public class EventMouseListener : MonoBehaviour
             PlayEvent();
 
             // Continue in game
-            cameraController.ZoomOut();
+            //cameraController.ZoomOut();
         }
             
     }
@@ -69,5 +77,7 @@ public class EventMouseListener : MonoBehaviour
     private void PlayEvent()
     {
         Debug.Log("Playing event on " + gameObject.name);
+        string[] lines = {"Choice dialogue line 1", "Choice dialogue line 2"};
+        levelGenerator.NewChoiceDialogueBox(lines);
     }
 }

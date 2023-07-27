@@ -26,8 +26,10 @@ public class LevelGenerator : MonoBehaviour
 
     [Space(10)]
     public GameObject dialogueboxObject;
+    public GameObject choiceDialogueboxObject;
 
     private Dialogue dialogueScript;
+    private ChoiceDialogue choiceDialogueScript;
 
     [Space(10)]
     // Position of the first image, probably   new Vector3(0, 0, 0)
@@ -57,6 +59,7 @@ public class LevelGenerator : MonoBehaviour
 
         // Get the script of the dialogue
         dialogueScript = dialogueboxObject.GetComponent<Dialogue>();
+        choiceDialogueScript = choiceDialogueboxObject.GetComponent<ChoiceDialogue>();
 
 
         // Well there should be a better way but as long as it works..
@@ -279,5 +282,15 @@ public class LevelGenerator : MonoBehaviour
     {
         // Start new dialogue
         dialogueScript.NewDialogue(sentences, allowAfter);
+    }
+
+
+    // Start a new dialogue with choices
+    // Is in this script to have a single point to handle all the level
+    // And a single object to which add all the objects in the editor
+    public void NewChoiceDialogueBox(string[] sentences)
+    {
+        // Start new dialogue
+        choiceDialogueScript.NewDialogue(sentences);
     }
 }

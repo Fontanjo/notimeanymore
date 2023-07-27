@@ -18,33 +18,51 @@ public class TileController : MonoBehaviour
 
     public void ActivateWizard()
     {
-        wizard.SetActive(true);
+        if (wizard != null)
+        {
+            wizard.SetActive(true);
+        }
     }
 
     public void DeactivateWizard()
     {
-        wizard.SetActive(false);
+        if (wizard != null)
+        {
+            wizard.SetActive(false);
+        }
     }
 
 
     public void ActivateEvent1()
     {
-        event1.SetActive(true);
+        if (event1 != null)
+        {
+            event1.SetActive(true);
+        }
     }
 
     public void DeactivateEvent1()
     {
-        event1.SetActive(false);
+        if (event1 != null)
+        {
+            event1.SetActive(false);
+        }
     }
 
     public void ActivateEvent2()
     {
-        event2.SetActive(true);
+        if (event2 != null)
+        {
+            event2.SetActive(true);
+        }
     }
 
     public void DeactivateEvent2()
     {
-        event2.SetActive(false);
+        if (event2 != null)
+        {
+            event2.SetActive(false);
+        }
     }
 
 
