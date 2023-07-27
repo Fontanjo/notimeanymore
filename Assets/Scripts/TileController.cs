@@ -34,7 +34,15 @@ public class TileController : MonoBehaviour
 
     public Animator GetWizardAnimator()
     {
-        return wizard.gameObject.transform.GetChild(0).GetComponent<Animator>();;
+        if (wizard != null)
+        {
+            return wizard.gameObject.transform.GetChild(0).GetComponent<Animator>();
+        }
+        else
+        {
+            return null;
+        }
+        
     }
 
 

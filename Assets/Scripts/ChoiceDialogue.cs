@@ -105,7 +105,11 @@ public class ChoiceDialogue : MonoBehaviour
         // Show choices
         ShowOptions();
 
+        
+
         // Zoom out (continue game)
+        // This should be done by pressing one of the options
+        //gameObject.SetActive(false);
         //cameraController.ZoomOut();
         
     }

@@ -7,7 +7,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
-    Transform cameraTransform;
+    Transform cameraTransform; 
     private Vector3 rightMovement, leftMovement;
     Vector3 targetRight, targetLeft;
     public float duration = 20f;
@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
 
     private GameObject levelGeneratorObj;
     private LevelGenerator levelGenerator;
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -55,27 +55,26 @@ public class CameraController : MonoBehaviour
     public void MoveLeft()
     {
         // Move camera
-        StartCoroutine(_moveTo(targetLeft, "left"));
+        StartCoroutine(_moveTo(targetLeft, "left"));  
     }
 
 
     // Actual movement coroutine
     private IEnumerator _moveTo(Vector3 targetPos, string dir)
     {
+
         // Get tile controller of starting tile (root not yet updated)
         TileController oldTc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
 
-        // Show leaving animation
-        if (oldTc != null)
+        // Show animation
+        Animator oldAnim = oldTc.GetWizardAnimator();
+        if (oldAnim != null)
         {
-            oldTc.GetWizardAnimator().SetTrigger("IsLeaving");
-            yield return new WaitForSeconds(2);
+            oldAnim.SetTrigger("IsLeaving");
+            yield return new WaitForSeconds(3.5f);
         }
 
-
-
-
-
+        
         // Block additional movement
         canMove = false;
         while (Vector3.Distance(cameraTransform.transform.position, targetPos) > 0.01f)
@@ -90,17 +89,17 @@ public class CameraController : MonoBehaviour
             yield return null;
         }
 
-
+        
 
         // Update targets
-        UpdateTargets();
+        UpdateTargets(); 
         // Update root node and delete deprecated objects
         if (dir == "left")
             LevelGenerator.MoveRootNodeLeft();
         if (dir == "right")
             LevelGenerator.MoveRootNodeRight();
 
-
+        
 
         // Get tile controller
         TileController tc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
@@ -119,7 +118,7 @@ public class CameraController : MonoBehaviour
         /* // Go back to map view
         ZoomOut(); */
 
-
+        
     }
 
 
@@ -135,7 +134,7 @@ public class CameraController : MonoBehaviour
         else
         {
             tc.ActivateEvent1();
-            tc.ActivateEvent2();
+            //tc.ActivateEvent2(); // For now always only 1, and player directly
         }
     }
 
@@ -153,18 +152,12 @@ public class CameraController : MonoBehaviour
     /// Play on the current tile (root node)
     /// From the tile itself, get new objects and place them
     /// Add click listener and game logic
-    private void PlayTile()
+    public void PlayTile()
     {
-        Debug.Log("Play on tile " + LevelGenerator.GetRootNode().imageObject.name);
+        Debug.Log("Play event1 on tile " + LevelGenerator.GetRootNode().imageObject.name);
 
-        // Instantiate new dialogue
-        string[] sentences = { "Item1", "Item2", "Item3" };
-        string[] allowAfter = { "event" };
-        levelGenerator.NewDialogueBox(sentences, allowAfter);
-
-        // Allow to select one element
-        //LevelVariables.Instance().AllowSelectEvent();
-
+        string[] lines = {"Choice dialogue line 1", "Choice dialogue line 2"};
+        levelGenerator.NewChoiceDialogueBox(lines);
 
     }
 
@@ -181,6 +174,7 @@ public class CameraController : MonoBehaviour
         time = 0f;
     }
 
-
+    
 
 }
+

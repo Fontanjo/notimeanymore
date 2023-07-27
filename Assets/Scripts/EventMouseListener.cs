@@ -74,7 +74,7 @@ public class EventMouseListener : MonoBehaviour
         return LevelVariables.Instance().CanSelectEvent();
     }
 
-    private void PlayEvent()
+    public void PlayEvent()
     {
         Debug.Log("Playing event on " + gameObject.name);
         string[] lines = {"Choice dialogue line 1", "Choice dialogue line 2"};
