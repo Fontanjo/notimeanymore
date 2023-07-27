@@ -290,8 +290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePrefabs:
-  - {fileID: 2633275919191065798, guid: 3cf7750df9bd01fd480c72708f828545, type: 3}
-  - {fileID: 2633275919191065798, guid: aec0bb6959d9fbb5fbf817402273e717, type: 3}
+  - {fileID: 2633275919191065798, guid: d190718c7788dd4d49e9757dc2ed02e3, type: 3}
+  - {fileID: 2633275919191065798, guid: acd073639769acbeea1a40bc90f25c31, type: 3}
   parentGameObject: {fileID: 650129640}
   canvasParentObject: {fileID: 136922027}
   numberOfLayers: 4
