@@ -8,6 +8,7 @@ public class LevelGenerator : MonoBehaviour
     //[Header("Images")]
     [Tooltip("The prefabs from which to generate the scenes")]
     public List<GameObject> imagePrefabs;
+    public List<GameObject> initialPrefabs;
 
     [Space(10)]
 
@@ -30,9 +31,9 @@ public class LevelGenerator : MonoBehaviour
 
     [Space(10)]
     // Position of the first image, probably   new Vector3(0, 0, 0)
-    public static Vector3 initialImagePosition = new Vector3(0, -2, 0);
-    public static Vector3 leftMovement = new Vector3(-11, 4, 10);
-    public static Vector3 rightMovement = new Vector3(11, 4, 10);
+    public static Vector3 initialImagePosition = new Vector3(0, -4.2f, 0);
+    public static Vector3 leftMovement = new Vector3(-11, 3, 10);
+    public static Vector3 rightMovement = new Vector3(11, 3, 10);
 
 
     // !!!!!!!! static field !!!!!!!!!!
@@ -69,7 +70,7 @@ public class LevelGenerator : MonoBehaviour
     private ImageNode GenerateRandomLevel()
     {
         // Generate first image at the center
-        GameObject mainImageObject = InstantiateRandomPrefab(imagePrefabs, initialImagePosition);
+        GameObject mainImageObject = InstantiateRandomPrefab(initialPrefabs, initialImagePosition);
         ImageNode rootNode = new ImageNode(mainImageObject);
 
         // Get the nodes of the current layer (at the first iteration only the root node)

@@ -41,6 +41,9 @@ public class EventMouseListener : MonoBehaviour
             // Block selecting events
             LevelVariables.Instance().BlockSelectEvent();
 
+            // Play event choosen
+            PlayEvent();
+
             // Continue in game
             cameraController.ZoomOut();
         }
@@ -61,5 +64,10 @@ public class EventMouseListener : MonoBehaviour
     public bool Selectable()
     {
         return LevelVariables.Instance().CanSelectEvent();
+    }
+
+    private void PlayEvent()
+    {
+        Debug.Log("Playing event on " + gameObject.name);
     }
 }

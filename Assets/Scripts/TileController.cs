@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TileController : MonoBehaviour
 {
-    public GameObject event1, event2;
+    public GameObject wizard, event1, event2;
 
     // Start is called before the first frame update
     void Start()
@@ -12,8 +12,20 @@ public class TileController : MonoBehaviour
         // Deactivate events
         DeactivateEvent1();
         DeactivateEvent2();
+        DeactivateWizard();
     }
     
+
+    public void ActivateWizard()
+    {
+        wizard.SetActive(true);
+    }
+
+    public void DeactivateWizard()
+    {
+        wizard.SetActive(false);
+    }
+
 
     public void ActivateEvent1()
     {
@@ -34,5 +46,6 @@ public class TileController : MonoBehaviour
     {
         event2.SetActive(false);
     }
+
 
 }

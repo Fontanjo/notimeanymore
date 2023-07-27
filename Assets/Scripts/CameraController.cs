@@ -111,6 +111,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
+            tc.ActivateWizard();
             tc.ActivateEvent1();
             tc.ActivateEvent2();
         }

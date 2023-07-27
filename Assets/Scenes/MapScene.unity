@@ -292,9 +292,11 @@ MonoBehaviour:
   imagePrefabs:
   - {fileID: 2633275919191065798, guid: d190718c7788dd4d49e9757dc2ed02e3, type: 3}
   - {fileID: 2633275919191065798, guid: acd073639769acbeea1a40bc90f25c31, type: 3}
+  initialPrefabs:
+  - {fileID: 2633275919191065798, guid: 891a91ae8ce93b0cd81d81fa5b55aa0b, type: 3}
   parentGameObject: {fileID: 650129640}
   canvasParentObject: {fileID: 136922027}
-  numberOfLayers: 4
+  numberOfLayers: 3
   dialogueboxObject: {fileID: 1410113544}
 --- !u!4 &959722417
 Transform:
