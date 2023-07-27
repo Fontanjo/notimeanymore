@@ -63,6 +63,9 @@ public class CameraController : MonoBehaviour
     private IEnumerator _moveTo(Vector3 targetPos, string dir)
     {
 
+        // Block additional movement
+        canMove = false;
+
         // Get tile controller of starting tile (root not yet updated)
         TileController oldTc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
 
@@ -75,8 +78,7 @@ public class CameraController : MonoBehaviour
         }
 
         
-        // Block additional movement
-        canMove = false;
+        // Move
         while (Vector3.Distance(cameraTransform.transform.position, targetPos) > 0.01f)
         {
             float t = time / duration;
@@ -156,7 +158,7 @@ public class CameraController : MonoBehaviour
     {
         Debug.Log("Play event1 on tile " + LevelGenerator.GetRootNode().imageObject.name);
 
-        string[] lines = {"Choice dialogue line 1", "Choice dialogue line 2"};
+        string[] lines = {"Choice dialogue line 1"};
         levelGenerator.NewChoiceDialogueBox(lines);
 
     }
