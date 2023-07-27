@@ -198,14 +198,18 @@ public class LevelGenerator : MonoBehaviour
     // Instantiate a new dialogue box
     public void InstantiateDialogueBox(string[] sentences)
     {
-        dialogueboxPrefab.GetComponent<Dialogue>().lines = sentences;
+        /* dialogueboxPrefab.GetComponent<Dialogue>().lines = sentences;
         GameObject db = Instantiate(dialogueboxPrefab, new Vector3(100,225,0), Quaternion.identity);
 
-        // Move it in the ui canvas
-        db.transform.parent = canvasParentObject;
         RectTransform rectT = db.GetComponent<RectTransform>();
+
+        // Move it in the ui canvas
+        Debug.Log(rectT.position);
+        db.transform.parent = canvasParentObject;
         Debug.Log(rectT.position);
         //Debug.Log(db.name);
-        //db.GetComponent<Dialogue>().lines = sentences;
+        //db.GetComponent<Dialogue>().lines = sentences; */
+
+        dialogueboxPrefab.GetComponent<Dialogue>().NewDialogue(sentences);
     }
 }

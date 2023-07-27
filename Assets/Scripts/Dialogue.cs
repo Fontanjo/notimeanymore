@@ -70,4 +70,19 @@ public class Dialogue : MonoBehaviour
             LevelVariables.Instance().AllowMovement();
         }
     }
+
+    public void NewDialogue(string[] newLines)
+    {
+        // Update lines
+        lines = newLines;
+        
+        // Clear text
+        textComponent.text = string.Empty;
+
+        // Reactivate object
+        gameObject.SetActive(true);
+
+        // Start
+        StartDialogue();
+    }
 }
