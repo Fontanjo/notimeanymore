@@ -101,6 +101,17 @@ public class CameraController : MonoBehaviour
     private void ZoomIn()
     {
         Debug.Log("Zoom in");
+        TileController tc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
+
+        if (tc == null)
+        {
+            Debug.Log("Tile Controller not found!");
+        }
+        else
+        {
+            tc.ActivateEvent1();
+            tc.ActivateEvent2();
+        }
     }
 
     /// Zoom out of the selected image

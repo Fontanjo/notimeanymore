@@ -290,12 +290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePrefabs:
-  - {fileID: 3456066461937047498, guid: cbef78ec7e4ca3694a764553307a90af, type: 3}
-  - {fileID: 8117671231001836943, guid: e994da56c8b33169996ab44e03a926ab, type: 3}
-  - {fileID: 2633275919191065798, guid: 58b32cecf9cd17bef849c25bc88d0727, type: 3}
   - {fileID: 2633275919191065798, guid: 3cf7750df9bd01fd480c72708f828545, type: 3}
-  - {fileID: 2633275919191065798, guid: 3cf7750df9bd01fd480c72708f828545, type: 3}
-  - {fileID: 2633275919191065798, guid: 3cf7750df9bd01fd480c72708f828545, type: 3}
+  - {fileID: 2633275919191065798, guid: aec0bb6959d9fbb5fbf817402273e717, type: 3}
   parentGameObject: {fileID: 650129640}
   canvasParentObject: {fileID: 136922027}
   numberOfLayers: 4
@@ -447,6 +443,37 @@ MonoBehaviour:
   Event: 
   PlayEvent: 1
   StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1410113552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410113544}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 433174123
+      Data2: 1161994609
+      Data3: 1111033993
+      Data4: 1963241641
+    Path: event:/Harp 1
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0

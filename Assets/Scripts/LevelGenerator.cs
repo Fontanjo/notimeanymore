@@ -30,7 +30,7 @@ public class LevelGenerator : MonoBehaviour
 
     [Space(10)]
     // Position of the first image, probably   new Vector3(0, 0, 0)
-    public static Vector3 initialImagePosition = new Vector3(0, -3, 0);
+    public static Vector3 initialImagePosition = new Vector3(0, -2, 0);
     public static Vector3 leftMovement = new Vector3(-11, 4, 10);
     public static Vector3 rightMovement = new Vector3(11, 4, 10);
 
