@@ -101,7 +101,7 @@ public class ChoiceDialogue : MonoBehaviour
         StartDialogue();
     }
 
-    private UnityAction m_MyFirstAction;
+    private UnityAction m_MyFirstAction, endAction;
 
     // Unlock actions that were locked during dialogue
     private void AllowActions()
@@ -110,9 +110,11 @@ public class ChoiceDialogue : MonoBehaviour
         ShowOptions();
 
         m_MyFirstAction += Leave;
+        endAction += LoadEndScene;
+
         c1text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
         c2text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
-        c3text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
+        c3text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(endAction);
     }
 
     private void HideOptions()
@@ -142,6 +144,12 @@ public class ChoiceDialogue : MonoBehaviour
         Debug.Log("Button clicked!");
         gameObject.SetActive(false);
         cameraController.ZoomOut();
+    }
+
+    private void LoadEndScene()
+    {
+        GlobalVariables.Set("currentLevelIndex", 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
     }
 
 }
