@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LevelVariables
 {
@@ -11,6 +12,8 @@ public class LevelVariables
     public Dictionary<string, int> achievementsDict = new Dictionary<string, int>();
     public Dictionary<string, int> objectDict = new Dictionary<string, int>();
     public Dictionary<string, string> questStagesDict = new Dictionary<string, string>();
+
+    public TextMeshProUGUI BodyPanelText, SoulPanelText, MindPanelText;
 
 
     // Singleton, allow only 1 instance of the class
@@ -67,6 +70,9 @@ public class LevelVariables
     {
         soulScore -= amount;
         Debug.Log("Removing " + amount + " soul");
+
+        UpdateSkillPanels();
+
         CheckDeath();
     }
 
@@ -74,6 +80,9 @@ public class LevelVariables
     {
         bodyScore -= amount;
         Debug.Log("Removing " + amount + " body");
+
+        UpdateSkillPanels();
+
         CheckDeath();
     }
 
@@ -81,9 +90,23 @@ public class LevelVariables
     {
         mindScore -= amount;
         Debug.Log("Removing " + amount + " mind");
+
+        UpdateSkillPanels();
+
         CheckDeath();
     }
 
+    public void UpdateSkillPanels()
+    {
+      // Update UI panel
+      MindPanelText.text = "" + mindScore;
+
+      // Update UI panel
+      BodyPanelText.text = "" + bodyScore;
+
+      // Update UI panel
+      SoulPanelText.text = "" + soulScore;
+    }
 
 
     public void CheckDeath()
