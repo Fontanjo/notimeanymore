@@ -2,15 +2,18 @@
 <env>
   <envName>
     <!-- Name of tile here: forest1, mountain1, etc. -->
+    defaultTile
   </envName>
   <dialogue>
     <text>
     <!-- Entry dialogue with initial choice -->
+        This is the question for this tile
     </text> 
   </dialogue>
     <choice1>
         <text>
             <!-- Choice 1 Text -->
+            text for choice 1 in file
         </text>
         <difficulty>
         </difficulty>
@@ -73,6 +76,7 @@
     <choice2>
         <text>
             <!-- Choice 2 Text -->
+            text for choice 2 in file
         </text>
         <difficulty>
         </difficulty>
@@ -135,6 +139,7 @@
     <choice3>
         <text>
             <!-- Choice 3 Text -->
+            text for choice 3 in file
         </text>
         <difficulty>
         </difficulty>

@@ -143,6 +143,7 @@ MonoBehaviour:
   wizard: {fileID: 4255558061794265955}
   event1: {fileID: 4146629500736897544}
   event2: {fileID: 2428275618848547455}
+  tileId: defaultTile
 --- !u!1001 &4653889320445683955
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -158,8 +158,24 @@ public class CameraController : MonoBehaviour
     {
         Debug.Log("Play event1 on tile " + LevelGenerator.GetRootNode().imageObject.name);
 
-        string[] lines = {"Choice dialogue line 1"};
-        string[] choices = {"c1", "choice2", "cho3"};
+        //string[] lines = {"Choice dialogue line 1"};
+        //string[] choices = {"c1", "choice2", "cho3"};
+
+        string tileId = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>().tileId;
+        Debug.Log(tileId);
+
+        // Get dialogue info
+        Dictionary<string, Dictionary<string, string>> dialogueDict = LevelGenerator.GetDialoguesDataDict()[tileId];
+
+        string line = dialogueDict["dialogue"]["text"];
+
+        string c1 = dialogueDict["choice1"]["text"];
+        string c2 = dialogueDict["choice2"]["text"];
+        string c3 = dialogueDict["choice2"]["text"];
+
+        string[] lines = {line};
+        string[] choices = {c1, c2, c3};
+
         levelGenerator.NewChoiceDialogueBox(lines, choices);
 
 

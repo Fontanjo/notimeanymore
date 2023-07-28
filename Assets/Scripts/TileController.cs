@@ -6,6 +6,8 @@ public class TileController : MonoBehaviour
 {
     public GameObject wizard, event1, event2;
 
+    public string tileId = "defaultTile";
+
     // Start is called before the first frame update
     void Start()
     {
