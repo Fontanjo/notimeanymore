@@ -284,7 +284,7 @@ public class ChoiceDialogue : MonoBehaviour
             LevelVariables.Instance().AddAchievement(gainedAchievement);
         }
 
-        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        //////////////////////////////////////////// Done ////////////////////////////////////////////
         // Set quest stage
         // ForestQuest 0/1/2
         // DesertQuest 0/1/2/..(?)
@@ -305,10 +305,30 @@ public class ChoiceDialogue : MonoBehaviour
             LevelVariables.Instance().SetQuestStage(newQuestStage);
         }
 
-        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        //////////////////////////////////////////// Done ////////////////////////////////////////////
         // Gain/Lose object
         // INCREASE object count
         // If lose, lose random object
+        string gainedObject;
+        string lostObject;
+        if (succeeded) // Don't really need this check but ok
+        {
+            gainedObject = choiceDict["goodGainedObject"];
+            if (!string.IsNullOrWhiteSpace(gainedObject))
+            {
+                LevelVariables.Instance().AddObject(gainedObject);
+            }
+        }
+        else
+        {
+            lostObject = choiceDict["badLostObject"];
+            if (!string.IsNullOrWhiteSpace(lostObject))
+            {
+                LevelVariables.Instance().RemoveObject();
+            }
+        }
+
+
 
         //////////////////////////////////////////// TODO ////////////////////////////////////////////
         // Get skill price and remove

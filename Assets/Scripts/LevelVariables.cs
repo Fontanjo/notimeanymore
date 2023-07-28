@@ -9,6 +9,7 @@ public class LevelVariables
     public int mindScore = 3;
 
     public Dictionary<string, int> achievementsDict = new Dictionary<string, int>();
+    public Dictionary<string, int> objectDict = new Dictionary<string, int>();
     public Dictionary<string, string> questStagesDict = new Dictionary<string, string>();
 
 
@@ -102,6 +103,26 @@ public class LevelVariables
 
         // Update count
         achievementsDict[name] = currentCount + 1;
+    }
+
+    public void AddObject(string name)
+    {
+        int currentCount;
+
+        // currentCount will be zero if the key id doesn't exist
+        objectDict.TryGetValue(name, out currentCount);
+
+        // Update count
+        objectDict[name] = currentCount + 1;
+
+        Debug.Log("Object " + name + " added!");
+    }
+
+    public void RemoveObject()
+    {
+        // Remove RANDOM object
+        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        Debug.Log("Random object lost..");
     }
 
     public void SetQuestStage(string questStage)
