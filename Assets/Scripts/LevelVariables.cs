@@ -163,6 +163,25 @@ public class LevelVariables
         Debug.Log("Quest stage for " + key + ": " + value);
     }
 
+    public bool MeetQuestStage(string questStage)
+    {
+        string key = GetQuestKey(questStage);
+        string value = "" + questStage[questStage.Length - 1];
+
+        // Try to get current stage
+        string currentStage;
+        // currentCount will be zero if the key id doesn't exist
+        questStagesDict.TryGetValue(key, out currentStage);
+
+        // If no stage set, the it's at 0
+        if (string.IsNullOrWhiteSpace(currentStage))
+        {
+            currentStage = "" + 0;
+        }
+
+        return (currentStage == value);
+    }
+
     private string GetQuestKey(string questStageName)
     {
         // Probably one of the ugliest part of the code

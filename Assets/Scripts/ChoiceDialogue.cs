@@ -128,14 +128,8 @@ public class ChoiceDialogue : MonoBehaviour
 
         c1text.text = dialogueDict["choice1"]["text"];
         c2text.text = dialogueDict["choice2"]["text"];
-        c3text.text = dialogueDict["choice2"]["text"];
+        c3text.text = dialogueDict["choice3"]["text"];
 
-
-
-        //////////////////////////////////////////// TODO ////////////////////////////////////////////
-        // Check for each choice if required_quest_stage >= ForestQuest0
-        // If empty, ok
-        // If DIFFERENT, block button (not only if smaller, but also if bigger)
 
         string[] newLine = {line};
         lines = newLine;
@@ -164,16 +158,89 @@ public class ChoiceDialogue : MonoBehaviour
         // Show choices
         ShowOptions();
 
-        // m_MyFirstAction += Leave;
-        // endAction += LoadEndScene;
+        Button c1textButton = c1text.gameObject.transform.parent.GetComponent<Button>();
+        Button c2textButton = c2text.gameObject.transform.parent.GetComponent<Button>();
+        Button c3textButton = c3text.gameObject.transform.parent.GetComponent<Button>();
+
+        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        // Check for each choice if required_quest_stage >= ForestQuest0
+        // If empty, ok
+        // If DIFFERENT, block button (not only if smaller, but also if bigger)
+
+        string c1requirement = tileDialogueDict["choice1"]["requiredQuestStage"];
+        string c2requirement = tileDialogueDict["choice2"]["requiredQuestStage"];
+        string c3requirement = tileDialogueDict["choice3"]["requiredQuestStage"];
+
+
+        Color blackColor = new Color(0, 0, 0, 1);
+        Color whiteColor = new Color(1, 1, 1, 1);
+        if (!string.IsNullOrWhiteSpace(c1requirement))
+        {
+            Debug.Log("C1 requirement: "+ c1requirement);
+
+            if (LevelVariables.Instance().MeetQuestStage(c1requirement))
+            {
+                Debug.Log("Requirement met!");
+
+                c1textButton.enabled = true;
+                c1textButton.GetComponent<Image>().color = whiteColor;
+            }
+            else
+            {
+                Debug.Log("Requirement not met");
+
+                c1textButton.enabled = false;
+                c1textButton.GetComponent<Image>().color = blackColor;
+            }
+        }
+
+        if (!string.IsNullOrWhiteSpace(c2requirement))
+        {
+            Debug.Log("C2 requirement: "+ c2requirement);
+
+            if (LevelVariables.Instance().MeetQuestStage(c2requirement))
+            {
+                Debug.Log("Requirement met!");
+
+                c2textButton.enabled = true;
+                c2textButton.GetComponent<Image>().color = whiteColor;
+            }
+            else
+            {
+                Debug.Log("Requirement not met");
+
+                c2textButton.enabled = false;
+                c2textButton.GetComponent<Image>().color = blackColor;
+            }
+        }
+
+        if (!string.IsNullOrWhiteSpace(c3requirement))
+        {
+            Debug.Log("C3 requirement: "+ c3requirement);
+
+            if (LevelVariables.Instance().MeetQuestStage(c3requirement))
+            {
+                Debug.Log("Requirement met!");
+
+                c3textButton.enabled = true;
+                c3textButton.GetComponent<Image>().color = whiteColor;
+            }
+            else
+            {
+                Debug.Log("Requirement not met");
+
+                c3textButton.enabled = false;
+                c3textButton.GetComponent<Image>().color = blackColor;
+            }
+        }
 
         choice1Action += Choice1;
         choice2Action += Choice2;
         choice3Action += Choice3;
 
-        c1text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(choice1Action);
-        c2text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(choice2Action);
-        c3text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(choice3Action);
+        c1textButton.onClick.AddListener(choice1Action);
+        c2textButton.onClick.AddListener(choice2Action);
+        c3textButton.onClick.AddListener(choice3Action);
     }
 
     private void HideOptions()
