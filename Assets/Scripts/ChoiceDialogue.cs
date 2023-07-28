@@ -162,7 +162,7 @@ public class ChoiceDialogue : MonoBehaviour
         Button c2textButton = c2text.gameObject.transform.parent.GetComponent<Button>();
         Button c3textButton = c3text.gameObject.transform.parent.GetComponent<Button>();
 
-        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        //////////////////////////////////////////// Done ////////////////////////////////////////////
         // Check for each choice if required_quest_stage >= ForestQuest0
         // If empty, ok
         // If DIFFERENT, block button (not only if smaller, but also if bigger)
