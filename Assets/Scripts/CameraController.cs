@@ -7,7 +7,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
-    Transform cameraTransform; 
+    Transform cameraTransform;
     private Vector3 rightMovement, leftMovement;
     Vector3 targetRight, targetLeft;
     public float duration = 20f;
@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
 
     private GameObject levelGeneratorObj;
     private LevelGenerator levelGenerator;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,13 +55,28 @@ public class CameraController : MonoBehaviour
     public void MoveLeft()
     {
         // Move camera
-        StartCoroutine(_moveTo(targetLeft, "left"));  
+        StartCoroutine(_moveTo(targetLeft, "left"));
     }
 
 
     // Actual movement coroutine
     private IEnumerator _moveTo(Vector3 targetPos, string dir)
     {
+
+        // Get tile controller
+        TileController tc;
+        if (dir == "left")
+        {
+          tc = LevelGenerator.GetRootNode().leftChild.imageObject.GetComponent<TileController>();
+        }
+        else
+        {
+          tc = LevelGenerator.GetRootNode().rightChild.imageObject.GetComponent<TileController>();
+        }
+
+        // Change global parameter of sound based on arrival tile
+        tc.ActivateSoundHolder();
+
 
         // Block additional movement
         canMove = false;
@@ -77,7 +92,7 @@ public class CameraController : MonoBehaviour
             yield return new WaitForSeconds(3.5f);
         }
 
-        
+
         // Move
         while (Vector3.Distance(cameraTransform.transform.position, targetPos) > 0.01f)
         {
@@ -91,20 +106,20 @@ public class CameraController : MonoBehaviour
             yield return null;
         }
 
-        
+
 
         // Update targets
-        UpdateTargets(); 
+        UpdateTargets();
         // Update root node and delete deprecated objects
         if (dir == "left")
             LevelGenerator.MoveRootNodeLeft();
         if (dir == "right")
             LevelGenerator.MoveRootNodeRight();
 
-        
+
 
         // Get tile controller
-        TileController tc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
+        //TileController tc = LevelGenerator.GetRootNode().imageObject.GetComponent<TileController>();
 
         // Show arrival animation
         tc.ActivateWizard();
@@ -120,7 +135,7 @@ public class CameraController : MonoBehaviour
         /* // Go back to map view
         ZoomOut(); */
 
-        
+
     }
 
 
@@ -192,7 +207,6 @@ public class CameraController : MonoBehaviour
         time = 0f;
     }
 
-    
+
 
 }
-

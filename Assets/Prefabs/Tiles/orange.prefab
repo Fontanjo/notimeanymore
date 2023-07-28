@@ -36,6 +36,7 @@ Transform:
   - {fileID: 5657026743364746954}
   - {fileID: 6249014521453764285}
   - {fileID: 6627504260640769127}
+  - {fileID: 2674929679467753172}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,6 +131,7 @@ MonoBehaviour:
   wizard: {fileID: 7861697704999259065}
   event1: {fileID: 4146629500736897544}
   event2: {fileID: 2428275618848547455}
+  soundHolder: {fileID: 8767421455776800820}
   tileId: defaultTile
 --- !u!61 &741249821449302235
 BoxCollider2D:
@@ -157,6 +159,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 32.138557, y: 12.595573}
   m_EdgeRadius: 0
+--- !u!1 &8767421455776800820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2674929679467753172}
+  - component: {fileID: 7493220883814072122}
+  m_Layer: 0
+  m_Name: SoundHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2674929679467753172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767421455776800820}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.9877809, y: -2.8268442, z: -0.9977079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2633275919191065797}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7493220883814072122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767421455776800820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Environnement
+  TriggerEvent: 11
+  Value: 0
 --- !u!1001 &1621705191379576873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -362,22 +412,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9130937174270219242, guid: 79a3c9a61ad3e3c7b91b84706f6663c6, type: 3}
   m_PrefabInstance: {fileID: 5133069436539703778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8793147524907297043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146629500736897544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Parameter: Environnement
-  TriggerEvent: 11
-  Value: 0
 --- !u!4 &5657026743364746954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 701884985862188840, guid: 79a3c9a61ad3e3c7b91b84706f6663c6, type: 3}

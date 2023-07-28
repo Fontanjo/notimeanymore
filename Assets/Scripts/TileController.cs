@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class TileController : MonoBehaviour
 {
-    public GameObject wizard, event1, event2;
+    public GameObject wizard, event1, event2, soundHolder;
 
     public string tileId = "defaultTile";
+
+    // Deactivate before start
+    void Awake()
+    {
+      DeactivateSoundHolder();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +22,7 @@ public class TileController : MonoBehaviour
         DeactivateEvent2();
         DeactivateWizard();
     }
-    
+
 
     public void ActivateWizard()
     {
@@ -44,7 +50,23 @@ public class TileController : MonoBehaviour
         {
             return null;
         }
-        
+    }
+
+
+    public void ActivateSoundHolder()
+    {
+      if (soundHolder != null)
+      {
+        soundHolder.SetActive(true);
+      }
+    }
+
+    public void DeactivateSoundHolder()
+    {
+      if (soundHolder != null)
+      {
+        soundHolder.SetActive(false);
+      }
     }
 
 
