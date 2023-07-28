@@ -9,7 +9,7 @@ public class TileMouseListener : MonoBehaviour
     private Color origCol, onMouseOverCol;
 
     private CameraController cameraController;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +32,9 @@ public class TileMouseListener : MonoBehaviour
         if (Selectable())
         {
             string direction = ImageNode.GetPath(gameObject);
-            
+
             // Convert to uppercase to make the switch case-insensitive
-            switch (direction.ToUpper()) 
+            switch (direction.ToUpper())
             {
                 case "LEFT":
                     cameraController.MoveLeft();
@@ -56,11 +56,11 @@ public class TileMouseListener : MonoBehaviour
                     break;
             }
         }
-            
+
     }
 
     void OnMouseEnter(){
-        // Only make selectable when 
+        // Only make selectable when
         if (Selectable())
             sr.color = onMouseOverCol;
     }

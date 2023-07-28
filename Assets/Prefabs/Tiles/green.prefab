@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 2633275919191065797}
   - component: {fileID: 2633275919191065796}
   - component: {fileID: 4380009693632535692}
-  - component: {fileID: 5889876659101802635}
   - component: {fileID: -8526927086809806087}
   - component: {fileID: 6560304506679367117}
-  - component: {fileID: 1811379978973496817}
+  - component: {fileID: 1813247366237999958}
   m_Layer: 0
   m_Name: green
   m_TagString: Untagged
@@ -104,19 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c103581d1d4eeb648b3a69ccb324189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &5889876659101802635
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2633275919191065798}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 30.56134, y: 14.035861, z: 0.2}
-  m_Center: {x: -0.06565666, y: -0.78653765, z: 0}
 --- !u!114 &-8526927086809806087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,22 +131,32 @@ MonoBehaviour:
   event1: {fileID: 4338183336750445756}
   event2: {fileID: 2428275618848547455}
   tileId: defaultTile
---- !u!114 &1811379978973496817
-MonoBehaviour:
+--- !u!61 &1813247366237999958
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2633275919191065798}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Parameter: Environnement
-  TriggerEvent: 15
-  Value: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.042889595, y: -1.8870602}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 36.17, y: 20.486914}
+    newSize: {x: 6.4, y: 5.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 32.138557, y: 12.595573}
+  m_EdgeRadius: 0
 --- !u!1001 &1621705191379576873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,6 +338,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9130937174270219242, guid: dc4457961462e19a896dc4e9f7f91b12, type: 3}
   m_PrefabInstance: {fileID: 4792894579471705942}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1414285658149575149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4338183336750445756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Environnement
+  TriggerEvent: 11
+  Value: 1
 --- !u!4 &5421859601747314814 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 701884985862188840, guid: dc4457961462e19a896dc4e9f7f91b12, type: 3}
