@@ -79,6 +79,8 @@ public class ChoiceDialogue : MonoBehaviour
         LevelVariables.Instance().BlockSelectEvent();
 
         index = 0;
+        endedFinal = false;
+        writingFinal = false;
         StartCoroutine(TypeLine());
     }
 
@@ -121,14 +123,18 @@ public class ChoiceDialogue : MonoBehaviour
         c2text.text = dialogueDict["choice2"]["text"];
         c3text.text = dialogueDict["choice2"]["text"];
 
+
+
+        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        // Check for each choice if required_quest_stage >= ForestQuest0
+        // If empty, ok
+        // If DIFFERENT, block button (not only if smaller, but also if bigger)
+
         string[] newLine = {line};
         lines = newLine;
 
         // Hide options panels
         HideOptions();
-
-        endedFinal = false;
-        writingFinal = false;
 
 
         // Clear text
@@ -179,44 +185,149 @@ public class ChoiceDialogue : MonoBehaviour
 
     private void Choice1()
     {
-        Debug.Log("You clicked choice 1");
-
-
-        string finalMessage;
-
-        if (true) // If choice succeed
-        {
-           finalMessage = tileDialogueDict["choice1"]["goodDialogueText"];
-        }
-        else
-        {
-
-        }
-
-        string[] newLine = {finalMessage};
-        lines = newLine;
-
-        HideOptions();
-
-        textComponent.text = string.Empty;
-
-        StartCoroutine(TypeFinalLine());
+        ChoiceGeneral("choice1");
     }
 
     private void Choice2()
     {
-        Debug.Log("You clicked choice 2");
+        ChoiceGeneral("choice2");
     }
 
     private void Choice3()
     {
-        Debug.Log("You clicked choice 3");
+        ChoiceGeneral("choice3");
     }
 
-    private void Leave()
+    private void ChoiceGeneral(string choiceCode)
     {
-        Debug.Log("leaving");
-        string finalMessage = "GoodBy";
+        Dictionary<string, string> choiceDict = tileDialogueDict[choiceCode];
+
+        //////////////////////////////////////////// Done ////////////////////////////////////////////
+        // Get difficulty (chance of success)
+        // low  -> random > 33 --> badOutcome
+        // medium -> 50
+        // high -> 75
+        //
+
+        string difficulty = choiceDict["difficulty"];
+        int chances;
+        switch(difficulty)
+        {
+            case "low":
+                chances = 33;
+                break;
+            case "medium":
+                chances = 50;
+                break;
+            case "high":
+                chances = 75;
+                break;
+            default:
+                chances = 100;
+                break;
+        }
+
+
+        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        // Get outcome
+
+        int dice = Random.Range(0,101);
+        bool succeeded = dice < chances;
+
+
+        //////////////////////////////////////////// Done ////////////////////////////////////////////
+        // Get skill type
+        // ame
+        // corps
+        // esprit
+        //
+        // Remove skill amount
+        //   (aws 1)
+
+        string skillType = choiceDict["skillType"];
+        int skillAmount = int.Parse(choiceDict["skillAmount"]);
+
+        switch(skillType)
+        {
+            case "ame":
+                LevelVariables.Instance().RemoveSoul(skillAmount);
+                break;
+            case "corps":
+                LevelVariables.Instance().RemoveBody(skillAmount);
+                break;
+            case "esprit":
+                LevelVariables.Instance().RemoveMind(skillAmount);
+                break;
+            default:
+                Debug.Log("Skill type not recognized");
+                break;
+        }
+
+
+
+        //////////////////////////////////////////// Done ////////////////////////////////////////////
+        // GainAchievement
+        // Both possible with good and bad outcome
+        // INCREASE achievement count
+        string gainedAchievement;
+        if (succeeded)
+        {
+            gainedAchievement = choiceDict["goodGainedAchievement"];
+        }
+        else
+        {
+            gainedAchievement = choiceDict["badGainedAchievement"];
+        }
+        // Save achievement
+        if (!string.IsNullOrWhiteSpace(gainedAchievement))
+        {
+            LevelVariables.Instance().AddAchievement(gainedAchievement);
+        }
+
+        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        // Set quest stage
+        // ForestQuest 0/1/2
+        // DesertQuest 0/1/2/..(?)
+        // MountQuest 0/1/2/..(?)
+        // MarshQuest 0/1/2/..(?)
+        string newQuestStage;
+        if (succeeded)
+        {
+            newQuestStage = choiceDict["goodSetQuestStage"];
+        }
+        else
+        {
+            newQuestStage = choiceDict["badSetQuestStage"];
+        }
+        // Save achievement
+        if (!string.IsNullOrWhiteSpace(newQuestStage))
+        {
+            LevelVariables.Instance().SetQuestStage(newQuestStage);
+        }
+
+        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        // Gain/Lose object
+        // INCREASE object count
+        // If lose, lose random object
+
+        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        // Get skill price and remove
+        //   type
+        //   amount
+
+
+        string finalMessage;
+
+        // Write outcome message
+        if (true) // If choice succeed
+        {
+            finalMessage = tileDialogueDict["choice1"]["goodDialogueText"];
+        }
+        else
+        {
+            finalMessage = tileDialogueDict["choice1"]["badDialogueText"];
+        }
+
         string[] newLine = {finalMessage};
         lines = newLine;
 
@@ -225,8 +336,22 @@ public class ChoiceDialogue : MonoBehaviour
         textComponent.text = string.Empty;
 
         StartCoroutine(TypeFinalLine());
-        Debug.Log("Button clicked!");
     }
+
+    // private void Leave()
+    // {
+    //     Debug.Log("leaving");
+    //     string finalMessage = "GoodBy";
+    //     string[] newLine = {finalMessage};
+    //     lines = newLine;
+    //
+    //     HideOptions();
+    //
+    //     textComponent.text = string.Empty;
+    //
+    //     StartCoroutine(TypeFinalLine());
+    //     Debug.Log("Button clicked!");
+    // }
 
     private void LoadEndScene()
     {

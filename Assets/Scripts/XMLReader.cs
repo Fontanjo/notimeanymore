@@ -70,7 +70,7 @@ public class XMLReader : MonoBehaviour
                 Dictionary<string, string> diologueDict = new Dictionary<string, string>();
                 diologueDict.Add("text", dialogueText);
                 envDict.Add("dialogue", diologueDict);
-                
+
 
                 // Load choice 1 node
                 XmlNode c1node = envNode.SelectSingleNode("choice1");
@@ -124,9 +124,11 @@ public class XMLReader : MonoBehaviour
         choiceDict.Add("text", c1text);
 
         // Load difficulty of succeeding choice 1
-        int c1difficulty = LoadInt(choiceNode, "difficulty", 100);
+        // int c1difficulty = LoadInt(choiceNode, "difficulty", 100);
+        string difficulty = choiceNode.SelectSingleNode("difficulty").InnerText.Trim();
         //Debug.Log(c1difficulty);
-        choiceDict.Add("difficulty", "" + c1difficulty); // Cast back to string..
+        // choiceDict.Add("difficulty", "" + c1difficulty); // Cast back to string..
+        choiceDict.Add("difficulty", difficulty); // Cast back to string..
 
         // Load skill price node
         XmlNode skillpriceNode = choiceNode.SelectSingleNode("skillprice");
@@ -202,7 +204,7 @@ public class XMLReader : MonoBehaviour
         // Load achievement for bad outcome
         string badGainedAchievement = badOutcome.SelectSingleNode("gainedAchievement").InnerText.Trim();
         //Debug.Log(badGainedAchievement);
-        choiceDict.Add("badGainedAchievement)t", badGainedAchievement);
+        choiceDict.Add("badGainedAchievement", badGainedAchievement);
 
         // Load object for bad outcome
         string badSetQuestStage = badOutcome.SelectSingleNode("setQuestStage").InnerText.Trim();

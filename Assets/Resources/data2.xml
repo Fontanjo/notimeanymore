@@ -34,6 +34,7 @@
             </dialogue>
             <gainedAchievement>
                 <!-- Gained AchievementID -->
+                GainedAchievementTest
             </gainedAchievement>
             <setQuestStage>
                 ForestQuest1
@@ -56,9 +57,11 @@
             </dialogue>
             <gainedAchievement>
                 <!-- This might be an achievement you get -->
+                GainedAchievementTestBad
             </gainedAchievement>
             <setQuestStage>
                 <!-- This is the evolution of the questline -->
+                ForestQuest1
             </setQuestStage>
             <lostObject>
             </lostObject>
