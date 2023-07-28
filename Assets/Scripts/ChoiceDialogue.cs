@@ -82,10 +82,15 @@ public class ChoiceDialogue : MonoBehaviour
         }
     }
 
-    public void NewDialogue(string[] newLines)
+    public void NewDialogue(string[] newLines, string[] choices)
     {
         // Update lines
         lines = newLines;
+
+        // Should check if the length is 3
+        c1text.text = choices[0];
+        c2text.text = choices[1];
+        c3text.text = choices[2];
 
         // Hide options panels
         HideOptions();
@@ -119,11 +124,8 @@ public class ChoiceDialogue : MonoBehaviour
 
     private void HideOptions()
     {
-        c1text.text = "";
         c1text.gameObject.transform.parent.gameObject.SetActive(false);
-        c2text.text = "";
         c2text.gameObject.transform.parent.gameObject.SetActive(false);
-        c3text.text = "";
         c3text.gameObject.transform.parent.gameObject.SetActive(false);
 
 
@@ -131,11 +133,8 @@ public class ChoiceDialogue : MonoBehaviour
 
     private void ShowOptions()
     {
-        c1text.text = "Choice number 1";
         c1text.gameObject.transform.parent.gameObject.SetActive(true);
-        c2text.text = "Choice number 2";
         c2text.gameObject.transform.parent.gameObject.SetActive(true);
-        c3text.text = "Choice number 3";
         c3text.gameObject.transform.parent.gameObject.SetActive(true);
     }
 

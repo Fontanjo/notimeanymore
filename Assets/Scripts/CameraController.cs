@@ -159,7 +159,10 @@ public class CameraController : MonoBehaviour
         Debug.Log("Play event1 on tile " + LevelGenerator.GetRootNode().imageObject.name);
 
         string[] lines = {"Choice dialogue line 1"};
-        levelGenerator.NewChoiceDialogueBox(lines);
+        string[] choices = {"c1", "choice2", "cho3"};
+        levelGenerator.NewChoiceDialogueBox(lines, choices);
+
+
 
     }
 

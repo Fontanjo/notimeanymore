@@ -31,6 +31,7 @@ public class LevelGenerator : MonoBehaviour
     private Dialogue dialogueScript;
     private ChoiceDialogue choiceDialogueScript;
 
+
     [Space(10)]
     // Position of the first image, probably   new Vector3(0, 0, 0)
     public static Vector3 initialImagePosition = new Vector3(0, -4.2f, 0);
@@ -50,6 +51,7 @@ public class LevelGenerator : MonoBehaviour
 
     private static LevelGenerator thisScript;
    
+    private static Dictionary<string, Dictionary<string, Dictionary<string, string>>> dialoguesDataDict;
 
     /// Start is called before the first frame update
     /// Generate first 3 layers, and keep track of the root node
@@ -288,9 +290,24 @@ public class LevelGenerator : MonoBehaviour
     // Start a new dialogue with choices
     // Is in this script to have a single point to handle all the level
     // And a single object to which add all the objects in the editor
-    public void NewChoiceDialogueBox(string[] sentences)
+    public void NewChoiceDialogueBox(string[] sentences, string[] choices)
     {
         // Start new dialogue
-        choiceDialogueScript.NewDialogue(sentences);
+        choiceDialogueScript.NewDialogue(sentences, choices);
+    }
+
+
+
+
+    // Set dialogue data
+    public static void SetDialoguesDataDict(Dictionary<string, Dictionary<string, Dictionary<string, string>>> dict)
+    {
+        dialoguesDataDict = dict;
+    }
+
+    // Get dialogue data dict
+    public static Dictionary<string, Dictionary<string, Dictionary<string, string>>> GetDialoguesDataDict()
+    {
+        return dialoguesDataDict;
     }
 }

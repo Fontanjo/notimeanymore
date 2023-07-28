@@ -78,6 +78,7 @@ public class EventMouseListener : MonoBehaviour
     {
         Debug.Log("Playing event on " + gameObject.name);
         string[] lines = {"Choice dialogue line 1", "Choice dialogue line 2"};
-        levelGenerator.NewChoiceDialogueBox(lines);
+        string[] choices = {"EvListener c1", "EvListener c2", "EvListener c3"};
+        levelGenerator.NewChoiceDialogueBox(lines, choices);
     }
 }

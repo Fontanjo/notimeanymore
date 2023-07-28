@@ -33,6 +33,8 @@ public class XMLReader : MonoBehaviour
         // Find all nodes named 'env'
         XmlNodeList envNodes = xmlDoc.SelectNodes("env");
 
+        Dictionary<string, Dictionary<string, Dictionary<string, string>>> dataDict = new Dictionary<string, Dictionary<string, Dictionary<string, string>>>();
+
         if (envNodes.Count > 0)
         {
             // Iterate over each 'env' node
@@ -81,7 +83,14 @@ public class XMLReader : MonoBehaviour
                 Dictionary<string, string> c3Dict = LoadChoice(c3node);
                 envDict.Add("choice3", c3Dict);
 
+
+
+                // Save to outer dict
+                dataDict.Add(envName, envDict);
             }
+
+            // Pass to level generator (which should store all the info necessary for the generation of the level)
+            LevelGenerator.SetDialoguesDataDict(dataDict);
         }
         else
         {
