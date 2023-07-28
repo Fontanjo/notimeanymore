@@ -88,7 +88,35 @@ public class LevelVariables
 
     public void CheckDeath()
     {
-       // If any soul/body/mind is <= 0, end scene
+
+        bool dead = false;
+
+        if (soulScore <= 0)
+        {
+            dead = true;
+            Debug.Log("Dead: soul value " + soulScore);
+        }
+
+        if (bodyScore <= 0)
+        {
+            dead = true;
+            Debug.Log("Dead: body value " + bodyScore);
+        }
+
+        if (mindScore <= 0)
+        {
+            dead = true;
+            Debug.Log("Dead: mind value " + mindScore);
+        }
+
+        if (dead)
+        {
+            //////////////////////////////////////////// TODO ////////////////////////////////////////////
+            // Save all necessary infos
+            Debug.Log("You died!######################################");
+            //GlobalVariables.Set("currentLevelIndex", 1);
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+        }
     }
 
 

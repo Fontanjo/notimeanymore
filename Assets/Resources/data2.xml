@@ -44,8 +44,10 @@
             </gainedObject>
             <skillprice>
                 <type>
+                    ame
                 </type>
                 <amount>
+                    2
                 </amount>
             </skillprice>
         </goodOutcome>
@@ -67,8 +69,10 @@
             </lostObject>
             <skillprice>
                 <type>
+                    ame
                 </type>
                 <amount>
+                    3
                 </amount>
             </skillprice>
         </badOutcome>

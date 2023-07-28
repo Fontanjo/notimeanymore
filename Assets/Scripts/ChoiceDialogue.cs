@@ -34,7 +34,7 @@ public class ChoiceDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) // TODO allow for any input? Otherwise maybe tell use to click
+        if(Input.GetMouseButtonDown(0))
         {
             if (!writingFinal)
             {
@@ -61,6 +61,9 @@ public class ChoiceDialogue : MonoBehaviour
                 {
                   //StopAllCoroutines();
                   Debug.Log("Update 2");
+
+                  // Stop coroutines
+                  StopAllCoroutines();
                   // Close dialogue
                   gameObject.SetActive(false);
                   // Allow movement
@@ -116,6 +119,10 @@ public class ChoiceDialogue : MonoBehaviour
     {
         // Save reference to dict
         tileDialogueDict = dialogueDict;
+
+        index = 0;
+        endedFinal = false;
+        writingFinal = false;
 
         string line = dialogueDict["dialogue"]["text"];
 
@@ -228,7 +235,7 @@ public class ChoiceDialogue : MonoBehaviour
         }
 
 
-        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        //////////////////////////////////////////// Done ////////////////////////////////////////////
         // Get outcome
 
         int dice = Random.Range(0,101);
@@ -330,16 +337,51 @@ public class ChoiceDialogue : MonoBehaviour
 
 
 
-        //////////////////////////////////////////// TODO ////////////////////////////////////////////
+        //////////////////////////////////////////// Done ////////////////////////////////////////////
         // Get skill price and remove
         //   type
         //   amount
+        // Empty for no
+        string additionalSkillType;
+        string additionalSkillAmount;
+        if (succeeded)
+        {
+            additionalSkillType = choiceDict["goodskillType"];
+            additionalSkillAmount = choiceDict["goodskillAmount"];
+        }
+        else
+        {
+            additionalSkillType = choiceDict["badskillType"];
+            additionalSkillAmount = choiceDict["badskillAmount"];
+        }
+
+        if (!string.IsNullOrWhiteSpace(additionalSkillType) && !string.IsNullOrWhiteSpace(additionalSkillAmount))
+        {
+            int additionalSkillAmountInt = int.Parse(additionalSkillAmount);
+
+            switch(additionalSkillType)
+            {
+                case "ame":
+                    LevelVariables.Instance().RemoveSoul(additionalSkillAmountInt);
+                    break;
+                case "corps":
+                    LevelVariables.Instance().RemoveBody(additionalSkillAmountInt);
+                    break;
+                case "esprit":
+                    LevelVariables.Instance().RemoveMind(additionalSkillAmountInt);
+                    break;
+                default:
+                    Debug.Log("Skill type not recognized");
+                    break;
+            }
+        }
+
 
 
         string finalMessage;
 
         // Write outcome message
-        if (true) // If choice succeed
+        if (succeeded)
         {
             finalMessage = tileDialogueDict["choice1"]["goodDialogueText"];
         }
@@ -355,23 +397,17 @@ public class ChoiceDialogue : MonoBehaviour
 
         textComponent.text = string.Empty;
 
+        Debug.Log("Write final textttttttttttttttttttttttt.............");
+        Debug.Log("Write final textttttttttttttttttttttttt.............");
+        Debug.Log("Write final textttttttttttttttttttttttt.............");
+        writingFinal = true;
+        foreach (string l in lines) {
+            Debug.Log(l);
+        }
+
         StartCoroutine(TypeFinalLine());
     }
 
-    // private void Leave()
-    // {
-    //     Debug.Log("leaving");
-    //     string finalMessage = "GoodBy";
-    //     string[] newLine = {finalMessage};
-    //     lines = newLine;
-    //
-    //     HideOptions();
-    //
-    //     textComponent.text = string.Empty;
-    //
-    //     StartCoroutine(TypeFinalLine());
-    //     Debug.Log("Button clicked!");
-    // }
 
     private void LoadEndScene()
     {
@@ -384,12 +420,19 @@ public class ChoiceDialogue : MonoBehaviour
     IEnumerator TypeFinalLine()
     {
         // Dialogue
-        foreach (char c in lines[index].ToCharArray())
-        {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
-        }
+        // foreach (char c in lines[index].ToCharArray())
+        // {
+        //     textComponent.text += c;
+        //     yield return new WaitForSeconds(textSpeed);
+        // }
+
+        //////////////// Hard fix of the problem ////////
+        //////////////// BUG ////////////////
+        // When iterating, from the second tile it will write multiple time each char
+        // For now just put entire text directly
+        textComponent.text = lines[0];
         endedFinal = true;
+        yield return true;
     }
 
 }
