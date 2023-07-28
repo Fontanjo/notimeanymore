@@ -55,11 +55,11 @@ public class EventMouseListener : MonoBehaviour
             // Continue in game
             //cameraController.ZoomOut();
         }
-            
+
     }
 
     void OnMouseEnter(){
-        // Only make selectable when 
+        // Only make selectable when
         if (Selectable())
             sr.color = onMouseOverCol;
     }
@@ -79,6 +79,6 @@ public class EventMouseListener : MonoBehaviour
         Debug.Log("Playing event on " + gameObject.name);
         string[] lines = {"Choice dialogue line 1", "Choice dialogue line 2"};
         string[] choices = {"EvListener c1", "EvListener c2", "EvListener c3"};
-        levelGenerator.NewChoiceDialogueBox(lines, choices);
+        // levelGenerator.NewChoiceDialogueBox(lines, choices);
     }
 }

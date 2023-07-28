@@ -182,16 +182,16 @@ public class CameraController : MonoBehaviour
         // Get dialogue info
         Dictionary<string, Dictionary<string, string>> dialogueDict = LevelGenerator.GetDialoguesDataDict()[tileId];
 
-        string line = dialogueDict["dialogue"]["text"];
+        // string line = dialogueDict["dialogue"]["text"];
+        //
+        // string c1 = dialogueDict["choice1"]["text"];
+        // string c2 = dialogueDict["choice2"]["text"];
+        // string c3 = dialogueDict["choice2"]["text"];
+        //
+        // string[] lines = {line};
+        // string[] choices = {c1, c2, c3};
 
-        string c1 = dialogueDict["choice1"]["text"];
-        string c2 = dialogueDict["choice2"]["text"];
-        string c3 = dialogueDict["choice2"]["text"];
-
-        string[] lines = {line};
-        string[] choices = {c1, c2, c3};
-
-        levelGenerator.NewChoiceDialogueBox(lines, choices);
+        levelGenerator.NewChoiceDialogueBox(dialogueDict);
     }
 
     private void UpdateTargets()

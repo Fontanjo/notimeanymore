@@ -14,6 +14,7 @@ public class ChoiceDialogue : MonoBehaviour
 
     private int index;
     private CameraController cameraController;
+    private bool writingFinal = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,14 +33,31 @@ public class ChoiceDialogue : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0)) // TODO allow for any input? Otherwise maybe tell use to click
         {
-            if (textComponent.text == lines[index])
+            if (!writingFinal)
             {
-                NextLine();
+                if (textComponent.text == lines[index])
+                {
+                  NextLine();
+                }
+                else
+                {
+                  StopAllCoroutines();
+                  textComponent.text = lines[index];
+                }
             }
             else
             {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
+                if (textComponent.text == lines[index])
+                {
+                  //NextLine();
+                  Debug.Log("Update 1");
+                }
+                else
+                {
+                  //StopAllCoroutines();
+                  //textComponent.text = lines[index];
+                  Debug.Log("Update 2");
+                }
             }
         }
     }
@@ -76,26 +94,28 @@ public class ChoiceDialogue : MonoBehaviour
         }
         else
         {
+            writingFinal = true;
             //gameObject.SetActive(false);
-
+            StopAllCoroutines();
             AllowActions();
         }
     }
 
-    public void NewDialogue(string[] newLines, string[] choices)
+    public void NewDialogue(Dictionary<string, Dictionary<string, string>> dialogueDict)
     {
-        // Update lines
-        lines = newLines;
+        string line = dialogueDict["dialogue"]["text"];
 
-        // Should check if the length is 3
-        c1text.text = choices[0];
-        c2text.text = choices[1];
-        c3text.text = choices[2];
+        c1text.text = dialogueDict["choice1"]["text"];
+        c2text.text = dialogueDict["choice2"]["text"];
+        c3text.text = dialogueDict["choice2"]["text"];
+
+        string[] newLine = {line};
+        lines = newLine;
 
         // Hide options panels
         HideOptions();
-        
-        
+
+
         // Clear text
         textComponent.text = string.Empty;
 
@@ -106,15 +126,18 @@ public class ChoiceDialogue : MonoBehaviour
         StartDialogue();
     }
 
+
     private UnityAction m_MyFirstAction, endAction;
 
     // Unlock actions that were locked during dialogue
     private void AllowActions()
     {
+        Debug.Log("Allow action");
         // Show choices
         ShowOptions();
 
         m_MyFirstAction += Leave;
+
         endAction += LoadEndScene;
 
         c1text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
@@ -127,8 +150,6 @@ public class ChoiceDialogue : MonoBehaviour
         c1text.gameObject.transform.parent.gameObject.SetActive(false);
         c2text.gameObject.transform.parent.gameObject.SetActive(false);
         c3text.gameObject.transform.parent.gameObject.SetActive(false);
-
-
     }
 
     private void ShowOptions()
@@ -140,15 +161,37 @@ public class ChoiceDialogue : MonoBehaviour
 
     private void Leave()
     {
+        Debug.Log("leaving");
+        string finalMessage = "GoodBy";
+        string[] newLine = {finalMessage};
+        lines = newLine;
+
+        textComponent.text = string.Empty;
+        index = 0;
+
+        StartCoroutine(TypeFinalLine());
         Debug.Log("Button clicked!");
-        gameObject.SetActive(false);
-        cameraController.ZoomOut();
     }
 
     private void LoadEndScene()
     {
-        GlobalVariables.Set("currentLevelIndex", 1);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+        Debug.Log("End action");
+        // GlobalVariables.Set("currentLevelIndex", 1);
+        // UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+    }
+
+
+    IEnumerator TypeFinalLine()
+    {
+        // Dialogue
+        foreach (char c in lines[index].ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
+        //Debug.Log("end final line");
+        //gameObject.SetActive(false);
+        //cameraController.ZoomOut();
     }
 
 }

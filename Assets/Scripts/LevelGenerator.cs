@@ -50,7 +50,7 @@ public class LevelGenerator : MonoBehaviour
     private static List<ImageNode> lastLayer;
 
     private static LevelGenerator thisScript;
-   
+
     private static Dictionary<string, Dictionary<string, Dictionary<string, string>>> dialoguesDataDict;
 
     /// Start is called before the first frame update
@@ -107,7 +107,7 @@ public class LevelGenerator : MonoBehaviour
 
         // Save reference to last layer, to simplify addition of new layers later
         lastLayer = currentLayer;
-        
+
         // Return the root node
         return rootNode;
     }
@@ -122,7 +122,7 @@ public class LevelGenerator : MonoBehaviour
         Vector3 pos = initialPos;
 
         // Store the new images
-        List<ImageNode> newLayer = new List<ImageNode>(); 
+        List<ImageNode> newLayer = new List<ImageNode>();
 
         // Generate the nodes in the next layer
         for (int j = 0; j < nbTiles; j++)
@@ -132,7 +132,7 @@ public class LevelGenerator : MonoBehaviour
             ImageNode node = new ImageNode(pref);
 
             newLayer.Add(node);
-            
+
             // Update position for next element
             pos += rightMovement;
         }
@@ -250,7 +250,7 @@ public class LevelGenerator : MonoBehaviour
 
         // Copy reference to last layer
         List<ImageNode> currentLayer = lastLayer;
-        
+
         // Generate new layer
         List<ImageNode> newLayer = GenerateNewLayer(nbTiles, startPos, rmove);
 
@@ -290,10 +290,10 @@ public class LevelGenerator : MonoBehaviour
     // Start a new dialogue with choices
     // Is in this script to have a single point to handle all the level
     // And a single object to which add all the objects in the editor
-    public void NewChoiceDialogueBox(string[] sentences, string[] choices)
+    public void NewChoiceDialogueBox(Dictionary<string, Dictionary<string, string>> dialogueDict)
     {
         // Start new dialogue
-        choiceDialogueScript.NewDialogue(sentences, choices);
+        choiceDialogueScript.NewDialogue(dialogueDict);
     }
 
 
