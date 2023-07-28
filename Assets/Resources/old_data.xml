@@ -6,39 +6,50 @@
   <dialogue>
     <text>
     <!-- Entry dialogue with initial choice -->
+    Text for dialogue
     </text> 
   </dialogue>
     <choice1>
         <text>
             <!-- Choice 1 Text -->
+            Text for choice 1
         </text>
         <difficulty>
+            20
         </difficulty>
         <skillprice>
             <type>
+                Body
             </type>
             <amount>
+                1
             </amount>
         </skillprice>
         <requiredQuestStage>
             <!-- This is the stage level of the quest required for the choice to be available -->
+            Required quest stage for choice 1
         </requiredQuestStage>
         <goodOutcome>
             <dialogue>
                 <text>
                     <!-- Good outcome Text -->
+                    Text for good outcome
                 </text>
             </dialogue>
             <gainedachievement> 
                 <!-- Gained AchievementID -->
+                Good outcome achievement
             </gainedachievement>
             <gainedObject> 
                 <!-- Gained ObjectID -->
+                Good outcome object
             </gainedObject>
             <skillprice>
                 <type>
+                    Type for c1 good
                 </type>
                 <amount>
+                    2
                 </amount>
             </skillprice>
         </goodOutcome>

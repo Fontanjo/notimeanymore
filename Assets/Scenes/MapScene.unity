@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a585ecb40f6cf8e2a9f21f835460b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textAsset: {fileID: 4900000, guid: 1e82b098093fd85d88c5a36bdbef9ada, type: 3}
+  textAsset: {fileID: 4900000, guid: 8fd5428521966d1d5aee2c7b5819202b, type: 3}
 --- !u!4 &965767763
 Transform:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7487473428765220048, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15.211
+      value: -15.21106
       objectReference: {fileID: 0}
     - target: {fileID: 7487473428765220048, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1339,7 +1339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9192921332788655081, guid: 8d01da3246f65525e9151f9b483ddff2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -15.211
+      value: -15.21106
       objectReference: {fileID: 0}
     - target: {fileID: 9192921332788655081, guid: 8d01da3246f65525e9151f9b483ddff2, type: 3}
       propertyPath: m_AnchoredPosition.y
