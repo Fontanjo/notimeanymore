@@ -135,11 +135,83 @@ public class LevelVariables
         if (dead)
         {
             //////////////////////////////////////////// TODO ////////////////////////////////////////////
+
+            // Save achievements
+
+            int musKill;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("MushroomKill", out musKill);
+            GlobalVariables.Set("MushroomKill", musKill);
+            // Reset
+            achievementsDict["MushroomKill"] = 0;
+
+
+            int InsectKill;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("InsectKill", out InsectKill);
+            GlobalVariables.Set("InsectKill", InsectKill);
+            // Reset
+            achievementsDict["InsectKill"] = 0;
+
+
+            int GnomeKill;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("GnomeKill", out GnomeKill);
+            GlobalVariables.Set("GnomeKill", GnomeKill);
+            // Reset
+            achievementsDict["GnomeKill"] = 0;
+
+
+            int HarpyKill;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("HarpyKill", out HarpyKill);
+            GlobalVariables.Set("HarpyKill", HarpyKill);
+            // Reset
+            achievementsDict["HarpyKill"] = 0;
+
+
+
+            // Save objects
+
+            int RelicCount;
+            // currentCount will be zero if the key id doesn't exist
+            objectDict.TryGetValue("RelicCount", out RelicCount);
+            GlobalVariables.Set("RelicCount", RelicCount);
+            // Reset
+            objectDict["RelicCount"] = 0;
+
+            int ScrollCount;
+            // currentCount will be zero if the key id doesn't exist
+            objectDict.TryGetValue("ScrollCount", out ScrollCount);
+            GlobalVariables.Set("ScrollCount", ScrollCount);
+            // Reset
+            objectDict["ScrollCount"] = 0;
+
+            int relic;
+            // currentCount will be zero if the key id doesn't exist
+            objectDict.TryGetValue("Relic", out relic);
+            GlobalVariables.Set("Relic", relic);
+            // Reset
+            objectDict["Relic"] = 0;
+            
+            // int relic;
+            // // currentCount will be zero if the key id doesn't exist
+            // objectDict.TryGetValue("Relic", out relic);
+            // GlobalVariables.Set("Relic", relic);
+            // // Reset
+            // objectDict["Relic"] = 0;
+
+            // Object Relic
+
             // Save all necessary infos
             Debug.Log("You died!######################################");
-            //GlobalVariables.Set("currentLevelIndex", 1);
-            //UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
         }
+    }
+
+    public void ResetDict()
+    {
+
     }
 
 

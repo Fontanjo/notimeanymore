@@ -8,7 +8,6 @@ public class RestartButtonListener : MonoBehaviour
 {
     void Restart(){
         Debug.Log("Restart");
-        GlobalVariables.Set("currentLevelIndex", 2);
         UnityEngine.SceneManagement.SceneManager.LoadScene("MapScene");
     }
 
