@@ -15,6 +15,9 @@ public class ChoiceDialogue : MonoBehaviour
     private int index;
     private CameraController cameraController;
     private bool writingFinal = false;
+    private bool endedFinal = false;
+
+    private Dictionary<string, Dictionary<string, string>> tileDialogueDict;
 
     // Start is called before the first frame update
     void Start()
@@ -47,16 +50,21 @@ public class ChoiceDialogue : MonoBehaviour
             }
             else
             {
-                if (textComponent.text == lines[index])
+                if (!endedFinal)
                 {
-                  //NextLine();
+                  //StopAllCoroutines();  // Do not allow (for now)
+                  //textComponent.text = lines[index];
+                  //endedFinal = true;
                   Debug.Log("Update 1");
                 }
                 else
                 {
                   //StopAllCoroutines();
-                  //textComponent.text = lines[index];
                   Debug.Log("Update 2");
+                  // Close dialogue
+                  gameObject.SetActive(false);
+                  // Allow movement
+                  cameraController.ZoomOut();
                 }
             }
         }
@@ -94,6 +102,7 @@ public class ChoiceDialogue : MonoBehaviour
         }
         else
         {
+            index = 0;
             writingFinal = true;
             //gameObject.SetActive(false);
             StopAllCoroutines();
@@ -103,6 +112,9 @@ public class ChoiceDialogue : MonoBehaviour
 
     public void NewDialogue(Dictionary<string, Dictionary<string, string>> dialogueDict)
     {
+        // Save reference to dict
+        tileDialogueDict = dialogueDict;
+
         string line = dialogueDict["dialogue"]["text"];
 
         c1text.text = dialogueDict["choice1"]["text"];
@@ -114,6 +126,9 @@ public class ChoiceDialogue : MonoBehaviour
 
         // Hide options panels
         HideOptions();
+
+        endedFinal = false;
+        writingFinal = false;
 
 
         // Clear text
@@ -127,7 +142,7 @@ public class ChoiceDialogue : MonoBehaviour
     }
 
 
-    private UnityAction m_MyFirstAction, endAction;
+    private UnityAction choice1Action, choice2Action, choice3Action, m_MyFirstAction, endAction;
 
     // Unlock actions that were locked during dialogue
     private void AllowActions()
@@ -136,13 +151,16 @@ public class ChoiceDialogue : MonoBehaviour
         // Show choices
         ShowOptions();
 
-        m_MyFirstAction += Leave;
+        // m_MyFirstAction += Leave;
+        // endAction += LoadEndScene;
 
-        endAction += LoadEndScene;
+        choice1Action += Choice1;
+        choice2Action += Choice2;
+        choice3Action += Choice3;
 
-        c1text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
-        c2text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(m_MyFirstAction);
-        c3text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(endAction);
+        c1text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(choice1Action);
+        c2text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(choice2Action);
+        c3text.gameObject.transform.parent.GetComponent<Button>().onClick.AddListener(choice3Action);
     }
 
     private void HideOptions()
@@ -159,6 +177,42 @@ public class ChoiceDialogue : MonoBehaviour
         c3text.gameObject.transform.parent.gameObject.SetActive(true);
     }
 
+    private void Choice1()
+    {
+        Debug.Log("You clicked choice 1");
+
+
+        string finalMessage;
+
+        if (true) // If choice succeed
+        {
+           finalMessage = tileDialogueDict["choice1"]["goodDialogueText"];
+        }
+        else
+        {
+
+        }
+
+        string[] newLine = {finalMessage};
+        lines = newLine;
+
+        HideOptions();
+
+        textComponent.text = string.Empty;
+
+        StartCoroutine(TypeFinalLine());
+    }
+
+    private void Choice2()
+    {
+        Debug.Log("You clicked choice 2");
+    }
+
+    private void Choice3()
+    {
+        Debug.Log("You clicked choice 3");
+    }
+
     private void Leave()
     {
         Debug.Log("leaving");
@@ -166,8 +220,9 @@ public class ChoiceDialogue : MonoBehaviour
         string[] newLine = {finalMessage};
         lines = newLine;
 
+        HideOptions();
+
         textComponent.text = string.Empty;
-        index = 0;
 
         StartCoroutine(TypeFinalLine());
         Debug.Log("Button clicked!");
@@ -176,8 +231,8 @@ public class ChoiceDialogue : MonoBehaviour
     private void LoadEndScene()
     {
         Debug.Log("End action");
-        // GlobalVariables.Set("currentLevelIndex", 1);
-        // UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+        GlobalVariables.Set("currentLevelIndex", 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
     }
 
 
@@ -189,9 +244,7 @@ public class ChoiceDialogue : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-        //Debug.Log("end final line");
-        //gameObject.SetActive(false);
-        //cameraController.ZoomOut();
+        endedFinal = true;
     }
 
 }
