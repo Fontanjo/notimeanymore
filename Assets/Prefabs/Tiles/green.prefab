@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Parameter: Environnement
-  TriggerEvent: 16
+  TriggerEvent: 15
   Value: 1
 --- !u!1001 &1621705191379576873
 PrefabInstance:
