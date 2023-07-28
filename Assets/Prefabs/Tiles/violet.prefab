@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5889876659101802635}
   - component: {fileID: -8526927086809806087}
   - component: {fileID: 6560304506679367117}
+  - component: {fileID: 7133378384188193580}
   m_Layer: 0
   m_Name: violet
   m_TagString: Untagged
@@ -144,6 +145,22 @@ MonoBehaviour:
   event1: {fileID: 4146629500736897544}
   event2: {fileID: 2428275618848547455}
   tileId: defaultTile
+--- !u!114 &7133378384188193580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2633275919191065798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Environnement
+  TriggerEvent: 16
+  Value: 2
 --- !u!1001 &1621705191379576873
 PrefabInstance:
   m_ObjectHideFlags: 0

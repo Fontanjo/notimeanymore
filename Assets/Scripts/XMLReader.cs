@@ -42,6 +42,8 @@ public class XMLReader : MonoBehaviour
             {
                 // Dict to save all the infos
                 // C# does not allow for dict of different types (without casting)
+                //   Update: actually possible, see GlobalVariables script. Basically create a dict of <string, object> and set type when removing (dict.Get<int>(keyOfIntElement))
+                //   Will not change it now
                 // Structure will be:
                 //    dialogue -> text -> Text for first dialogue
                 //    choice1  -> text -> Text for choice 1
@@ -58,11 +60,11 @@ public class XMLReader : MonoBehaviour
 
                 // Load name/id
                 string envName = envNode.SelectSingleNode("envName").InnerText.Trim(); // Trim to remove start and end white spaces
-                Debug.Log("env name: " + envName);
+                //Debug.Log("env name: " + envName);
 
                 // Load dialogue text
                 string dialogueText = envNode.SelectSingleNode("dialogue/text").InnerText.Trim();
-                Debug.Log(dialogueText);
+                //Debug.Log(dialogueText);
 
                 // Put text into dict since c# does not allow to mix dicts and strings as dict values
                 Dictionary<string, string> diologueDict = new Dictionary<string, string>();
@@ -118,12 +120,12 @@ public class XMLReader : MonoBehaviour
 
         // Load text for choice 1
         string c1text = choiceNode.SelectSingleNode("text").InnerText.Trim();
-        Debug.Log(c1text);
+        //Debug.Log(c1text);
         choiceDict.Add("text", c1text);
 
         // Load difficulty of succeeding choice 1
         int c1difficulty = LoadInt(choiceNode, "difficulty", 100);
-        Debug.Log(c1difficulty);
+        //Debug.Log(c1difficulty);
         choiceDict.Add("difficulty", "" + c1difficulty); // Cast back to string..
 
         // Load skill price node
@@ -131,17 +133,17 @@ public class XMLReader : MonoBehaviour
 
         // Load skill type
         string skillType = skillpriceNode.SelectSingleNode("type").InnerText.Trim();
-        Debug.Log("Skill type: " + skillType);
+        //Debug.Log("Skill type: " + skillType);
         choiceDict.Add("skillType", skillType);
 
         // Load amount of skill required
         int skillAmount = LoadInt(skillpriceNode, "amount", 0);
-        Debug.Log("Skill amount: " + skillAmount);
+        //Debug.Log("Skill amount: " + skillAmount);
         choiceDict.Add("skillAmount", "" + skillAmount);
 
         // Load required quest stage
         string requiredQuestStage = choiceNode.SelectSingleNode("requiredQuestStage").InnerText.Trim();
-        Debug.Log(requiredQuestStage);
+        //Debug.Log(requiredQuestStage);
         choiceDict.Add("requiredQuestStage", requiredQuestStage);
 
 
@@ -154,22 +156,22 @@ public class XMLReader : MonoBehaviour
 
         // Load dialogue text
         string goodDialogueText = goodOutcome.SelectSingleNode("dialogue/text").InnerText.Trim();
-        Debug.Log(goodDialogueText);
+        //Debug.Log(goodDialogueText);
         choiceDict.Add("goodDialogueText", goodDialogueText);
 
         // Load achievement for good outcome
         string goodGainedAchievement = goodOutcome.SelectSingleNode("gainedAchievement").InnerText.Trim();
-        Debug.Log(goodGainedAchievement);
+        //Debug.Log(goodGainedAchievement);
         choiceDict.Add("goodGainedAchievement", goodGainedAchievement);
 
         // Load object for good outcome
         string goodSetQuestStage = goodOutcome.SelectSingleNode("setQuestStage").InnerText.Trim();
-        Debug.Log(goodSetQuestStage);
+        //Debug.Log(goodSetQuestStage);
         choiceDict.Add("goodSetQuestStage", goodSetQuestStage);
 
         // Load object for good outcome
         string goodGainedObject = goodOutcome.SelectSingleNode("gainedObject").InnerText.Trim();
-        Debug.Log(goodGainedObject);
+        //Debug.Log(goodGainedObject);
         choiceDict.Add("goodGainedObject", goodGainedObject);
 
         // Load skill price node for good outcome
@@ -177,12 +179,12 @@ public class XMLReader : MonoBehaviour
 
         // Load skill type
         string goodskillType = goodOutcomeskillpriceNode.SelectSingleNode("type").InnerText.Trim();
-        Debug.Log("Skill type: " + goodskillType);
+        //Debug.Log("Skill type: " + goodskillType);
         choiceDict.Add("goodskillType", goodskillType);
 
         // Load amount of skill required
         int goodskillAmount = LoadInt(goodOutcomeskillpriceNode, "amount", 0);
-        Debug.Log("Skill amount: " + goodskillAmount);
+        //Debug.Log("Skill amount: " + goodskillAmount);
         choiceDict.Add("goodskillAmount", "" + goodskillAmount);
 
 
@@ -194,22 +196,22 @@ public class XMLReader : MonoBehaviour
 
         // Load dialogue text
         string badDialogueText = badOutcome.SelectSingleNode("dialogue/text").InnerText.Trim();
-        Debug.Log(badDialogueText);
+        //Debug.Log(badDialogueText);
         choiceDict.Add("badDialogueText", badDialogueText);
 
         // Load achievement for bad outcome
         string badGainedAchievement = badOutcome.SelectSingleNode("gainedAchievement").InnerText.Trim();
-        Debug.Log(badGainedAchievement);
+        //Debug.Log(badGainedAchievement);
         choiceDict.Add("badGainedAchievement)t", badGainedAchievement);
 
         // Load object for bad outcome
         string badSetQuestStage = badOutcome.SelectSingleNode("setQuestStage").InnerText.Trim();
-        Debug.Log(badSetQuestStage);
+        //Debug.Log(badSetQuestStage);
         choiceDict.Add("badSetQuestStage", badSetQuestStage);
 
         // Load object for bad outcome
         string badLostObject = badOutcome.SelectSingleNode("lostObject").InnerText.Trim();
-        Debug.Log(badLostObject);
+        //Debug.Log(badLostObject);
         choiceDict.Add("badLostObject", badLostObject);
 
         // Load skill price node for bad outcome
@@ -217,12 +219,12 @@ public class XMLReader : MonoBehaviour
 
         // Load skill type
         string badskillType = badOutcomeskillpriceNode.SelectSingleNode("type").InnerText.Trim();
-        Debug.Log("Skill type: " + badskillType);
+        //Debug.Log("Skill type: " + badskillType);
         choiceDict.Add("badskillType", badskillType);
 
         // Load amount of skill required
         int badskillAmount = LoadInt(badOutcomeskillpriceNode, "amount", 0);
-        Debug.Log("Skill amount: " + badskillAmount);
+        //Debug.Log("Skill amount: " + badskillAmount);
         choiceDict.Add("badskillAmount", "" + badskillAmount);
 
 

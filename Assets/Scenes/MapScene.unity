@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 136922026}
   - component: {fileID: 136922025}
   - component: {fileID: 136922024}
+  - component: {fileID: 136922028}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -225,6 +226,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &136922028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136922023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1187565039
+      Data2: 1238687287
+      Data3: 1931452069
+      Data4: -1369480945
+    Path: event:/AMBIANCES/Environnements
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!224 &200411032 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7487473428765220048, guid: ba909c617af27e42aa329977fc0c1032, type: 3}

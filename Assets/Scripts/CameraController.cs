@@ -177,9 +177,6 @@ public class CameraController : MonoBehaviour
         string[] choices = {c1, c2, c3};
 
         levelGenerator.NewChoiceDialogueBox(lines, choices);
-
-
-
     }
 
     private void UpdateTargets()
