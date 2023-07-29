@@ -1,0 +1,2500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<envs>
+  <env>
+    <envName>
+      desert1
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      desert2
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      desert3
+
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      forest1
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      forest2
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      forest3
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      marsh1
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      marsh2
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      marsh3
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      mount1
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      mount2
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+  <env>
+    <envName>
+      mount3
+    </envName>
+    <dialogue>
+      <text>
+      Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages. SOME MORE CHAR SOME MORE CHAR
+      </text>
+    </dialogue>
+      <choice1>
+          <text>
+              D'un regard terrifiant, je fixais les yeux de la créature.
+          </text>
+          <difficulty>
+              medium
+          </difficulty>
+          <skillprice>
+              <type>
+                  ame
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              ForestQuest0
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+                  GainedAchievementTest
+              </gainedAchievement>
+              <setQuestStage>
+                  ForestQuest1
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      2
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                     Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- This might be an achievement you get -->
+                  GainedAchievementTestBad
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+                  ForestQuest1
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      3
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice1>
+          <!-- Choice 2 starts here -->
+      <choice2>
+          <text>
+              J'ai prié le secours des entrailles de la terre.
+          </text>
+          <difficulty>
+              hard
+          </difficulty>
+          <skillprice>
+              <type>
+                  corps
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  Relic
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  MushroomKill
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+                  random
+              </lostObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice2>
+          <!-- Choice 3 starts here -->
+      <choice3>
+          <text>
+              J'ai murmuré les mots pour me rendre invisible.
+          </text>
+          <difficulty>
+              easy
+          </difficulty>
+          <skillprice>
+              <type>
+                  esprit
+              </type>
+              <amount>
+                  1
+              </amount>
+          </skillprice>
+          <requiredQuestStage>
+              <!-- This is the stage level of the quest required for the choice to be available -->
+          </requiredQuestStage>
+          <goodOutcome>
+              <dialogue>
+                  <text>
+                      Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  <!-- Gained AchievementID -->
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <gainedObject>
+                  <!-- Gained ObjectID -->
+              </gainedObject>
+              <skillprice>
+                  <type>
+                  </type>
+                  <amount>
+                  </amount>
+              </skillprice>
+          </goodOutcome>
+          <badOutcome>
+              <dialogue>
+                  <text>
+                      Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                  </text>
+              </dialogue>
+              <gainedAchievement>
+                  GetHigh
+              </gainedAchievement>
+              <setQuestStage>
+                  <!-- This is the evolution of the questline -->
+              </setQuestStage>
+              <lostObject>
+              </lostObject>
+              <skillprice>
+                  <type>
+                      ame
+                  </type>
+                  <amount>
+                      1
+                  </amount>
+              </skillprice>
+          </badOutcome>
+      </choice3>
+  </env>
+</envs>
