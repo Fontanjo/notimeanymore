@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 
 public class CameraController : MonoBehaviour
@@ -207,6 +207,16 @@ public class CameraController : MonoBehaviour
         time = 0f;
     }
 
+    public void ReallowVariable(UnityEvent trigger)
+    {
+        StartCoroutine(WaitAndAlllow(trigger));
+    }
+
+    IEnumerator<WaitForSeconds> WaitAndAlllow(UnityEvent trigger)
+    {
+        yield return new WaitForSeconds(1);
+        trigger.Invoke();
+    }
 
 
 }

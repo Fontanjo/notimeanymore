@@ -29,9 +29,11 @@ public class XMLReader : MonoBehaviour
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(textAsset.text);
 
+        // Get root
+        XmlNode rootNode = xmlDoc.SelectSingleNode("envs");
 
         // Find all nodes named 'env'
-        XmlNodeList envNodes = xmlDoc.SelectNodes("env");
+        XmlNodeList envNodes = rootNode.SelectNodes("env");
 
         Dictionary<string, Dictionary<string, Dictionary<string, string>>> dataDict = new Dictionary<string, Dictionary<string, Dictionary<string, string>>>();
 

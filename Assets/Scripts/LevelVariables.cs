@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class LevelVariables
 {
@@ -66,24 +68,52 @@ public class LevelVariables
     }
 
 
+
+
+    // private bool canRemoveSoul = true;
+    // private void AllowCanRemoveSoul()
+    // {
+    //     canRemoveSoul = true;
+    // }
+    // public UnityEvent canRemoveSoultrigger;
+    // private UnityAction canRemoveSoulAction;
     public void RemoveSoul(int amount)
     {
-        soulScore -= amount;
-        Debug.Log("Removing " + amount + " soul");
+        // if (canRemoveSoul)
+        // {
+        //     canRemoveSoul = false;
 
-        UpdateSkillPanels();
+            // canRemoveSoulAction = new UnityAction(AllowCanRemoveSoul);
+            // canRemoveSoultrigger.AddListener(canRemoveSoulAction);
 
-        CheckDeath();
+            soulScore -= amount;
+            Debug.Log("Removing " + amount + " soul");
+
+            UpdateSkillPanels();
+
+            CheckDeath();
+
+        //     Camera.main.gameObject.GetComponent<CameraController>().ReallowVariable(canRemoveSoultrigger);
+        // }
     }
 
+
+    // private bool canRemoveBody = true;
     public void RemoveBody(int amount)
     {
-        bodyScore -= amount;
-        Debug.Log("Removing " + amount + " body");
+        // if (canRemoveSoul)
+        // {
+        //     canRemoveBody = false;
 
-        UpdateSkillPanels();
+            bodyScore -= amount;
+            Debug.Log("Removing " + amount + " body");
 
-        CheckDeath();
+            UpdateSkillPanels();
+
+            CheckDeath();
+
+            // Camera.main.gameObject.GetComponent<CameraController>().ReallowVariable(canRemoveBody);
+        // }
     }
 
     public void RemoveMind(int amount)

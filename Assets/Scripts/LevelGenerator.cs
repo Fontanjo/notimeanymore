@@ -310,4 +310,16 @@ public class LevelGenerator : MonoBehaviour
     {
         return dialoguesDataDict;
     }
+
+
+    // public void ReallowVariable(bool variable)
+    // {
+    //     StartCoroutine(WaitAndAlllow(variable));
+    // }
+    //
+    // IEnumerator<WaitForSeconds> WaitAndAlllow(bool variable)
+    // {
+    //     yield return new WaitForSeconds(3);
+    //     variable = true;
+    // }
 }
