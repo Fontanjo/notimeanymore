@@ -1351,6 +1351,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4431601596189482500, guid: d6cfd2f449e1ed2579436eb022a5b233, type: 2}
     - target: {fileID: 7552363284879467569, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: "En ouvrant les yeux, mon vieux corps me fit sentir que le temps pressait.
+        Je repris la route, convaincu que, cette fois-ci, je parviendrais \xE0 corriger
+        la l\xE9gende de ma vie."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552363284879467569, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
       propertyPath: allowAfter.Array.size
       value: 1
       objectReference: {fileID: 0}
