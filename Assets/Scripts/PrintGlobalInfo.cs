@@ -34,6 +34,8 @@ public class PrintGlobalInfo : MonoBehaviour
         int HarpyKill = GlobalVariables.Get<int>("HarpyKill");
         HarpyKillTxt.text = "HarpyKill: " + HarpyKill;
 
+        //
+
 
 
 
