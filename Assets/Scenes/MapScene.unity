@@ -565,7 +565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ee51b7853b0a63cc9307214ddf249d6, type: 2}
   m_sharedMaterial: {fileID: -5552720058646039948, guid: 4ee51b7853b0a63cc9307214ddf249d6, type: 2}
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ee51b7853b0a63cc9307214ddf249d6, type: 2}
   m_sharedMaterial: {fileID: -5552720058646039948, guid: 4ee51b7853b0a63cc9307214ddf249d6, type: 2}
@@ -905,7 +905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: 40
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ee51b7853b0a63cc9307214ddf249d6, type: 2}
   m_sharedMaterial: {fileID: -5552720058646039948, guid: 4ee51b7853b0a63cc9307214ddf249d6, type: 2}
@@ -1012,9 +1012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagePrefabs:
-  - {fileID: 2633275919191065798, guid: c1d794e514561fb1e886a48af5879d14, type: 3}
-  - {fileID: 2633275919191065798, guid: 298b919662ded5adda268621836d8eae, type: 3}
-  - {fileID: 2633275919191065798, guid: 5b868ad2531a26cac80346392d95fdc4, type: 3}
+  - {fileID: 2633275919191065798, guid: 44cff0fcf83a9ff00adc4b755b390f52, type: 3}
   initialPrefabs:
   - {fileID: 2633275919191065798, guid: 891a91ae8ce93b0cd81d81fa5b55aa0b, type: 3}
   parentGameObject: {fileID: 650129640}
@@ -1628,9 +1626,9 @@ MonoBehaviour:
   BodyPanelText: {fileID: 519421517}
   SoulPanelText: {fileID: 778912564}
   MindPanelText: {fileID: 795204000}
-  InitialBodySkills: 10
-  InitialSoulSkills: 10
-  InitialMindSkills: 10
+  InitialBodySkills: 30
+  InitialSoulSkills: 30
+  InitialMindSkills: 30
 --- !u!4 &2068068991
 Transform:
   m_ObjectHideFlags: 0
