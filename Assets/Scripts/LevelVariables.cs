@@ -143,7 +143,7 @@ public class LevelVariables
             achievementsDict.TryGetValue("MushroomKill", out musKill);
             GlobalVariables.Set("MushroomKill", musKill);
             // Reset
-            achievementsDict["MushroomKill"] = 0;
+            // achievementsDict["MushroomKill"] = 0;
 
 
             int InsectKill;
@@ -151,7 +151,7 @@ public class LevelVariables
             achievementsDict.TryGetValue("InsectKill", out InsectKill);
             GlobalVariables.Set("InsectKill", InsectKill);
             // Reset
-            achievementsDict["InsectKill"] = 0;
+            // achievementsDict["InsectKill"] = 0;
 
 
             int GnomeKill;
@@ -159,7 +159,7 @@ public class LevelVariables
             achievementsDict.TryGetValue("GnomeKill", out GnomeKill);
             GlobalVariables.Set("GnomeKill", GnomeKill);
             // Reset
-            achievementsDict["GnomeKill"] = 0;
+            // achievementsDict["GnomeKill"] = 0;
 
 
             int HarpyKill;
@@ -167,7 +167,7 @@ public class LevelVariables
             achievementsDict.TryGetValue("HarpyKill", out HarpyKill);
             GlobalVariables.Set("HarpyKill", HarpyKill);
             // Reset
-            achievementsDict["HarpyKill"] = 0;
+            // achievementsDict["HarpyKill"] = 0;
 
 
 
@@ -178,28 +178,28 @@ public class LevelVariables
             objectDict.TryGetValue("RelicCount", out RelicCount);
             GlobalVariables.Set("RelicCount", RelicCount);
             // Reset
-            objectDict["RelicCount"] = 0;
+            // objectDict["RelicCount"] = 0;
 
             int ScrollCount;
             // currentCount will be zero if the key id doesn't exist
             objectDict.TryGetValue("ScrollCount", out ScrollCount);
             GlobalVariables.Set("ScrollCount", ScrollCount);
             // Reset
-            objectDict["ScrollCount"] = 0;
+            // objectDict["ScrollCount"] = 0;
 
             int OfferingCount;
             // currentCount will be zero if the key id doesn't exist
             objectDict.TryGetValue("OfferingCount", out OfferingCount);
             GlobalVariables.Set("OfferingCount", OfferingCount);
             // Reset
-            objectDict["OfferingCount"] = 0;
+            // objectDict["OfferingCount"] = 0;
 
             int GemCount;
             // currentCount will be zero if the key id doesn't exist
             objectDict.TryGetValue("GemCount", out GemCount);
             GlobalVariables.Set("GemCount", GemCount);
             // Reset
-            objectDict["GemCount"] = 0;
+            // objectDict["GemCount"] = 0;
 
 
             // Save extra achievements
@@ -209,7 +209,7 @@ public class LevelVariables
             achievementsDict.TryGetValue("GetHigh", out GetHigh);
             GlobalVariables.Set("GetHigh", GetHigh);
             // Reset
-            achievementsDict["GetHigh"] = 0;
+            // achievementsDict["GetHigh"] = 0;
 
 
             int PartyCrasher;
@@ -217,7 +217,7 @@ public class LevelVariables
             achievementsDict.TryGetValue("PartyCrasher", out PartyCrasher);
             GlobalVariables.Set("PartyCrasher", PartyCrasher);
             // Reset
-            achievementsDict["PartyCrasher"] = 0;
+            // achievementsDict["PartyCrasher"] = 0;
 
 
             int SunBathing;
@@ -225,7 +225,7 @@ public class LevelVariables
             achievementsDict.TryGetValue("SunBathing", out SunBathing);
             GlobalVariables.Set("SunBathing", SunBathing);
             // Reset
-            achievementsDict["SunBathing"] = 0;
+            // achievementsDict["SunBathing"] = 0;
 
 
             int SnowBoarding;
@@ -233,7 +233,7 @@ public class LevelVariables
             achievementsDict.TryGetValue("SnowBoarding", out SnowBoarding);
             GlobalVariables.Set("SnowBoarding", SnowBoarding);
             // Reset
-            achievementsDict["SnowBoarding"] = 0;
+            // achievementsDict["SnowBoarding"] = 0;
 
 
 
