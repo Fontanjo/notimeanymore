@@ -18,6 +18,9 @@ public class PrintGlobalInfo : MonoBehaviour
     public TextMeshProUGUI GetHighTxt;
     public TextMeshProUGUI PartyCrasherTxt, SunBathingTxt, SnowBoardingTxt;
 
+    [Space(20)]
+    public TextMeshProUGUI ForestBossTxt;
+    public TextMeshProUGUI DesertBossTxt, MarshBossTxt, MountBossTxt;
 
     // Start is called before the first frame update
     void Start()
@@ -65,5 +68,24 @@ public class PrintGlobalInfo : MonoBehaviour
 
         int SnowBoarding = GlobalVariables.Get<int>("SnowBoarding");
         SnowBoardingTxt.text = "SnowBoarding: " + SnowBoarding;
+
+
+
+
+        int ForestBoss = GlobalVariables.Get<int>("ForestBoss");
+        ForestBossTxt.text = "ForestBoss: " + ForestBoss;
+
+        int DesertBoss = GlobalVariables.Get<int>("DesertBoss");
+        DesertBossTxt.text = "DesertBoss: " + DesertBoss;
+
+        int MarshBoss = GlobalVariables.Get<int>("MarshBoss");
+        MarshBossTxt.text = "MarshBoss: " + MarshBoss;
+
+        int MountBoss = GlobalVariables.Get<int>("MountBoss");
+        MountBossTxt.text = "MountBoss: " + MountBoss;
+
+
+
+        
     }
 }

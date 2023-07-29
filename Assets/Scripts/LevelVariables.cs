@@ -237,6 +237,41 @@ public class LevelVariables
 
 
 
+            // Save boss achievements
+
+            int ForestBoss;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("ForestBoss", out ForestBoss);
+            GlobalVariables.Set("ForestBoss", ForestBoss);
+            // Reset
+            // achievementsDict["ForestBoss"] = 0;
+
+
+            int DesertBoss;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("DesertBoss", out DesertBoss);
+            GlobalVariables.Set("DesertBoss", DesertBoss);
+            // Reset
+            // achievementsDict["DesertBoss"] = 0;
+
+
+            int MarshBoss;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("MarshBoss", out MarshBoss);
+            GlobalVariables.Set("MarshBoss", MarshBoss);
+            // Reset
+            // achievementsDict["MarshBoss"] = 0;
+
+
+            int MountBoss;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("MountBoss", out MountBoss);
+            GlobalVariables.Set("MountBoss", MountBoss);
+            // Reset
+            // achievementsDict["MountBoss"] = 0;
+
+
+
 
             // Save all necessary infos
             Debug.Log("You died!######################################");
