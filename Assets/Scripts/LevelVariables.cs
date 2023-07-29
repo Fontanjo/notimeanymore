@@ -187,21 +187,56 @@ public class LevelVariables
             // Reset
             objectDict["ScrollCount"] = 0;
 
-            int relic;
+            int OfferingCount;
             // currentCount will be zero if the key id doesn't exist
-            objectDict.TryGetValue("Relic", out relic);
-            GlobalVariables.Set("Relic", relic);
+            objectDict.TryGetValue("OfferingCount", out OfferingCount);
+            GlobalVariables.Set("OfferingCount", OfferingCount);
             // Reset
-            objectDict["Relic"] = 0;
-            
-            // int relic;
-            // // currentCount will be zero if the key id doesn't exist
-            // objectDict.TryGetValue("Relic", out relic);
-            // GlobalVariables.Set("Relic", relic);
-            // // Reset
-            // objectDict["Relic"] = 0;
+            objectDict["OfferingCount"] = 0;
 
-            // Object Relic
+            int GemCount;
+            // currentCount will be zero if the key id doesn't exist
+            objectDict.TryGetValue("GemCount", out GemCount);
+            GlobalVariables.Set("GemCount", GemCount);
+            // Reset
+            objectDict["GemCount"] = 0;
+
+
+            // Save extra achievements
+
+            int GetHigh;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("GetHigh", out GetHigh);
+            GlobalVariables.Set("GetHigh", GetHigh);
+            // Reset
+            achievementsDict["GetHigh"] = 0;
+
+
+            int PartyCrasher;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("PartyCrasher", out PartyCrasher);
+            GlobalVariables.Set("PartyCrasher", PartyCrasher);
+            // Reset
+            achievementsDict["PartyCrasher"] = 0;
+
+
+            int SunBathing;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("SunBathing", out SunBathing);
+            GlobalVariables.Set("SunBathing", SunBathing);
+            // Reset
+            achievementsDict["SunBathing"] = 0;
+
+
+            int SnowBoarding;
+            // currentCount will be zero if the key id doesn't exist
+            achievementsDict.TryGetValue("SnowBoarding", out SnowBoarding);
+            GlobalVariables.Set("SnowBoarding", SnowBoarding);
+            // Reset
+            achievementsDict["SnowBoarding"] = 0;
+
+
+
 
             // Save all necessary infos
             Debug.Log("You died!######################################");
