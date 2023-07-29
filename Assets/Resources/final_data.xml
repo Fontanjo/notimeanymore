@@ -1,0 +1,2446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<envs>
+    <env>
+    <envName>
+        forest1
+    </envName>
+    <dialogue>
+        <text>
+        Je pénètre prudemment entre les troncs noueux de l'épaisse forêt. Mon effroyable toux et le craquement des branches sous mes pas trahissaient ma présence. Parvenu dans les tréfonds du bois et, voulant me reposer un instant, j'aperçois alors deux yeux luisants qui m'épiaient à travers les feuillages.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                D'un regard terrifiant, je fixais les yeux de la créature.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                ForestQuest0
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Après quelques instants à nous toiser l'un et l'autre, le Mycellide sortit hors de sa cache timidement avec hésitation. Il imitait avec peine le son d'une voix humaine et semblait chercher à articuler des mots. En approchant ma bonne oreille je compris enfin quelques propos intelligibles: "maison moite", "masque vilain", "aider aider".
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    ForestQuest1
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Manifestement destabilisée par mon regard perçant, la créature aux yeux globuleux fit d'abord mine de reculer lentement avant de disparaître dans le sous-bois dans un mouvement de panique.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                J'ai prié le secours des entrailles de la terre.
+            </text>
+            <difficulty>
+                low
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Dans un vrombissement sonore, le sol s'est brusquement rompu, engloutissant la créature et l'arbuste qui lui servait de camouflage. Au bord du gouffre, pendu à une racine, un artefact cuivré miroitait les rares rayons de lumière que les épais feuillages laissaient passer.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    MushroomKill
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    Relic
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Le sol s'affaissa sous le poids du Mycellide qui tenta de s'agripper à ma besace. J'ai dû lui donner un coup vigoureux sur la tête pour lui faire lâcher prise. Mes bras fatigués n'ont cependant pas pu empêcher que le Mycellide emporte mes affaires dans sa chute.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    MushroomKill
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject>
+                    random 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                J'ai murmuré les mots pour me rendre invisible.
+            </text>
+            <difficulty>
+                high
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Je deviens alors aussi translucide que l'éclat de verre rituel que je tenais dans la main. La main sur le bouche pour ne pas tousser trop fort, je me dérobe au regard de la créature, visiblement déboussolée par ma subite disparition. 
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Le temps de sortir l'éclat de verre pour préparer mon sortilège, un Mycellide bondit hors de sa cache et me sauta au cou. Je me débattais de toutes mes forces, inhalant à plein poumons les spores nuisibles qui empestait l'air. Je suis finalement parvenu à me défaire de son étreinte et la tête m'en tournait.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    GetHigh
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                        ame
+                    </type>
+                    <amount>
+                        1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+
+    </env>
+    <env>
+    <envName>
+        forest2
+    </envName>
+    <dialogue>
+        <text>
+            Sous le couvert des feuillages obscurs, je découvre la souche creuse d'un arbre autrefois vénérable. Me baissant pour y voir mieux, je me bloque le dos et passe en avant la tête la première pour me retrouver quelques coudées plus bas dans un puit obscur que la bois pourri dissimulait.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je claque des doigts pour retourner dans le temps.
+            </text>
+            <difficulty>
+                high
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        La vieille souche et moi-même retrouvons notre état précédent, le passage est rebouché et je n'ai pas la moindre égratignure. Les forêts de Megenon sont truffées de ces passages enfouis sous les racines, les vestiges des anciennes cités bâties par les Premiers-Nés.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Je me retrouve coincé à la branche d'un arbre à quelques pieds de la souche. Le bois de l'arbre poussiéreux ne tarde pas à céder et je retombe aussitôt au sol, me frappant la hanche avec force. 
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                J'agrippe avec peine les racines pour remonter.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                DesertQuest1
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Mon vieux dos me fait des misères et les racines fragilisées cèdent durant mon ascension. Sous les mottes de terre qui s'arrachaient, j'aperçus une petite boîte en bois vermoulu contenant une clé d'or ailée. Jettant la clé dans ma besace, je ressortis du trou.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    DesertQuest2
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        L'ascension est exigeantes pour mes articulations mais je finis par ressortir du trou. Et tandis que je m'appuyais sur le bord de la souche pour me relever, le bois rongé par les asticots se brise à nouveau et je me heurte le genoux violemment contre une épaisse racine.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                Je regarde autour de moi en quête d'une autre sortie.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        J'emprunte un conduit étroit qui s'ouvre un dédale de couloirs couvert d'innombrables inscriptions. Au bout de l'un d'entre eux, une ouverture dans le mur laisse passer la lumière du sous-bois et l'air semble moins lourd.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Le trou où je me trouvais était en réalité une chambre funéraire dédiée à un prince des Premiers-Nés. Le sarcophage dressé, ouvert, avait déjà été pillé depuis longtemps. Derrière celui-ci quelques marches moussues conduisaient vers l'extérieur.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+
+    </env>
+    <env>
+    <envName>
+        forest3
+    </envName>
+    <dialogue>
+        <text>
+        Les sinueux chemins entre les ronces m'ont amené jusqu'à un cercle de vieux arbres aux branches torves. Un géant de mousse semblait affairé parmi ces arbres tourmentés. Il m'entendit approcher et s'arrêta net. Derrière lui, je distinguai le sujet de ses sinistres expérimentations: un Mycellide convulsant au sol.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je suggérai au géant de se repentir de son geste coupable.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Le géant de mousse baissa la tête et s'approcha lentement de moi. Il s'agenouilla devant moi et me regardais d'un air abattu. Je sentais que la créature était profondément corrompue et je me résolus à mettre fin à son calvaire. D'un geste sec et miséricordieux, je frappai le haut de son crâne avec mon bâton.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    ForestBoss
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Visiblement irrité par ma suggestion mentale, le géant de mousse s'époumone d'une voix gutturale et rauque. Le son sordide qui sortait de sa bouche me paralysa un instant et je décidai de m'éclipser rapidement.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                Je me métamorphose en un animal inoffensif.
+            </text>
+            <difficulty>
+                high
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Prenant l'apparence d'un jeune blaireau, je m'approche à tâton. Le sol tremble sous le râle rauque du géant de mousse mais il ne prête nullement attention à moi. Aux côtés du Mycellide agonisant j'entrevois un objet de métal cuivré à l'apparence intriguante. Je m'en saisis dans la mâchoire et me dérobe au regard du géant aussitôt.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    Relic
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Ma transformation ne se passe pas comme escompté et je prends par erreur l'apparence d'un escargot. Tout est si étrange avec cette perspective, tout passe si lentement, j'en suis presque devenu fou. Je tentai de m'échapper mais il me fallut une bonne journée pour m'éloigner de quelques foulées. Une fois ma forme véritable retrouvée, je quittai les bois.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                Je saisis le masque hurlant et le présente au géant.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                ForestQuest2
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Le géant s'agite et avance dans ma direction avec détermination. Le masque devait vraisemblablement lui appartenir et il n'avait pas l'air heureux de me voir le tenir. Je jetai le masque au sol et d'un coup de bâton je brisai le masque en deux. Ostensiblement horrifié par mon geste, le géant disparut dans le bois profond.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    ForestAchievement
+                </gainedAchievement>
+                <setQuestStage>
+                    ForestQuest3
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Le géant s'approche de moi furieux et hurle dans une langue hideuse pour me faire reculer. De crainte qu'il n'écrase ma vieille carcasse sous son poids considérable, je me mets en fuite sans demander mon reste. Après quelques lieux à pied, mes genoux arthritiques me font vivre un calvaire. Je m'arrête et repense au langage abject du géant.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+
+    </env>
+    <env>
+    <envName>
+        desert1
+    </envName>
+    <dialogue>
+        <text>
+        Au gré de mes errances dans les contrées désertes, je trouvai un chemin de traverse qui menait au pied d'un solide roc pourpre criblé de cavités à taille humaine. Un grande cité Troglodyte se dressait là. La voie était hélas bloquée par robuste Voraciptère en train de fouiner le sable en quête de quelque nourriture.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                J'entonnais un chant soporifique pour assoupir la bête.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                DesertQuest0
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Arrivé en bordure de la cité rupestre, un Troglodyte manifestement curieux s'approcha de moi. Incapables de nous comprendre par le verbe, nous étions contraints de gesticuler. Il paraissait vouloir me signifier un puit ou un trou ainsi qu'un petit objet précieux. Je ne saurais dire pourquoi mais il donnait l'air de me supplier.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    DesertQuest1
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Comme s'il haïssait mon chant suave, le Voraciptère s'éloigne néanmoins du chemin que j'emprunte aussitôt. Une patrouille de Troglodytes s'approche de moi pour m'empêcher le passage. Mon chant apaisant n'a pas d'effet sur eux et je me retrouve pris en tenaille. Je n'ai d'autre choix que de leur graisser la patte pour passer.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                random
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                Je fais jaillir des griffes acérées de mes mains.
+            </text>
+            <difficulty>
+                low
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Face au Voraciptère qui se cabrait en martelant le sol de ses pattes, je me tenais stoïquement. Un instant j'eus la crainte que mes vieilles jambes ne soient pas assez rapide pour déjouer la charge. Contre toute attention j'esquivai d'un pas grâcieux et transperçai la bête de part en part.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    DesertBoss
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Après un claquement de mandibules elle me chargea de tout son poids. Mes griffes pointées vers l'avant, je voulus esquiver son assaut. Hélas ma hanche douloureuse m'empêcha de bouger à temps et j'ai alors subi un violent coup. Je parvins à la blesser mais elle sembla se désintéresser de mes vieux os et repartit bientôt derrière les dunes.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                Je danse pour faire venir la pluie.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        D'épais nuages se forment au-dessus de ma tête et bientôt une pluie battante se met à déferler sur le sable bouillant. Le sol se change en boue et le Voraciptère s'enfuit pour se mettre à l'abri des éléments. Les Troglodytes, quant à eux, effrayés par l'orage approchant font place nette et je peux sans gêne poursuivre mon chemin.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Un violent orage éclate et le contraste entre le ciel noir et les dunes dorées est du plus bel effet. Tandis que je rêvasse en contemplant le spectacle, un éclair vient frapper le sol tout proche de moi, me laissant comme assommé. La détonation fut telle que mes tympans continuèrent de me provoquer des maux de têtes la journée durant.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+
+    </env>
+    <env>
+    <envName>
+        desert2
+    </envName>
+    <dialogue>
+        <text>
+        Depuis les cimes des dunes dorées, j'observe un canyon rocailleux où se laisse deviner la présence d'une cité Troglodyte. Tandis que je considérais le meilleur chemin pour approcher le canyon, le sable autour de moi se mit à frémir. Surgissant du sol, un soldat insectoïde me fait face et claque de ses mandibules frénétiquement.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je crache dans ma paume pour changer de forme.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Levant mon bras au ciel, le contenu de ma main s'évapore aussitôt et rapidement mon corps devient totalement brumeux. Le Troglodyte veut m'asséner un coup mais son arme passe à travers moi sans m'affecter. Il s'acharne quelques fois de plus mais abandonne rapidement et s'enfuit dans le sable brûlant.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Je lève la main au ciel mais mes vieilles jambes tréssaillent et je m'effondre au pied du Troglodyte. Il me grimpe dessus et ses mandibules suintantes s'agitent à deux doigts de mon visage. Mon coeur s'emballe et je succombe à une crise de panique. Un son de cor résonne dans le canyon et l'insectoïde disparaît immédiatement.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                random
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                Je plante mon bâton dans le sable pour créer une avalanche.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                MountQuest0
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        La dune est secouée et en un battement de cil, le sable se met à dévaler en contrebas. Le Troglodyte désemparé essaye de plonger dans le sol mais la force des sables l'emporte et il ne réapparaît que bien plus bas, sur le dos, les pattes frétillantes. Un parchemin semble attaché sous son abdomen.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    InsectKill
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    Scroll
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Dans un grondement sourd, nous nous retrouvons emportés dans les sables mouvants de la dune qui s'affaisse subitement. Je rampe hors du sable à grand peine, ma besace semble avoir perdu du leste. Le couvercle d'une tombre émerge maintenant du sable: "ci-gît la reine de cimes lointaines, exilée dans ce désert, elle attend son retour."
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    MountQuest1
+                </setQuestStage>
+                <lostObject> 
+                    random
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                Je lance un appel au vent brûlant du désert.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Des volutes de sables se mirent à virvolter autour de moi. Bientôt le souffle s'amplifia et je ne distinguais que le hurlement du vent. Les bourrasques de sables fouettaient les environs telles une myriade d'épingles acérées. Quand le calme revint enfin, mes vieux os furent comme revigorés par la chaleur et le Troglodyte gisait sans vie à mes pieds.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    InsectKill
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Un faible vent se souleva mais l'air était étonnemment glacé. Ce désagréable courant d'air raviva une douleur dans le bas de mon dos et je tombai sur le côté. Apparemment les Troglodytes détestent encore plus que moi ces températures glaciales.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+
+    </env>
+    <env>
+    <envName>
+        desert3
+    </envName>
+    <dialogue>
+        <text>
+        En explorant les sentiers arides qui mènent aux portes du désert, j'ai découvert un petit vallon dissimulé entre les rochers ocres. En me rapprochant, j'y aperçus un édifice en ruine formé d'une colonnade encerclant un massif piédestal. Un Troglodyte semblait surveiller la voie pour s'y rendre.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                J'invitai le Troglodyte à s'approcher calmement.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Entendant mon injonction magique, le Troglodyte descendit de son promontoire rocheux pour venir me faire face. Il demeurait figé et apathique. J'aperçus un précieux rouleau de parchemin dépasser discrètement de son ceinturon. Je m'en suis emparé avant de rejoindre la route.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    Scroll
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Je crains qu'à ce moment précis, une interférence magique n'ait retourné le sortilège contre son maître. Je me suis en effet approché du Troglodyte qui pestait pour que je m'en aille prestement. Une fois nez à nez avec lui, il m'asséna un coup dans le ventre qui me fit reprendre mes esprits soudainement.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                En étendant mes bras, je me formai des ailes.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Je m'envolai aussitôt au-dessus des dunes scintillantes tandis que le Troglodyte semblait ne pas comprendre ce qu'il était en train de voir. De là-haut je compris mieux ce que ce bâtiment ruiné avait dû être par le passé. Un grand mausolée à ciel ouvert se trouvait en son centre. Un squelette décapité s'y trouvait logé.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Fondant dans les airs, je me mis à planer avec bonheur jusqu'à ce que je ressente une lancée dans le bas de mes vertèbres. Incapable de contrôler mon vol, je finis par m'écraser dans le sable des dunes où je perdis connaissance. Lorsque je repris conscience, j'avais été littéralement rôti par le soleil ardent.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    SunBathing
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                J'ai pris possession de l'esprit du Troglodyte.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                MountQuest2
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Au son de mes incantations, la volonté du Troglodyte tomba sous mon joug. Je m'avançait avec lui en direction du piédestal où se trouvait un squelette sans tête. J'entendais la voix de la reine des cimes dans mon esprit. Je poignardai le Troglodyte et aussitôt les ossements éclatèrent en poussière.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    MountAchievement
+                </gainedAchievement>
+                <setQuestStage>
+                    MountQuest3
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        L'esprit du Troglodyte et le mien ne firent qu'un le temps d'un battement cardiaque. Je ressentis toute sa jeunesse et sa fraicheur. Tant de chose lui restait encore à faire, son avenir était devant lui. Lorsque je revins à mes esprits, je restai un moment sans bouger. Le Troglodyte semblait me considérer avec une empathie profonde.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    ame
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+
+    </env>
+    <env>
+    <envName>
+        marsh1
+    </envName>
+    <dialogue>
+        <text>
+        En bordure des eaux saumâtres du marécage, j'entendis des ricanements parmi les touffes de roseaux. Je hausse la voix en appellant les moqueurs à se manifester. Aussitôt, me voilà encerclé par une troupe de Phytophages portant des masques grotesques et me menaçant de leurs lances fluettes.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je pousse un hurlement strident pour les écarter.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        De ma bouche sortit un son si aigu qu'il aurait pu rompre le verre. L'un d'entre les Phytophages fut terrassé sur-le-champ par la violence de mon cri. Les autres ne se firent pas prier pour décamper à toute allure. Près du corps gisant du pauvre ladre se trouvait un petit bol rempli d'offrandes peu alléchantes.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    GnomeKill
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    Offering
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Mon souffle court ne me permit pas de conduire mon dessein à exécution. J'avais à peine pu commencer mon hurlement que je m'interrompis moi-même en toussant vigoureusement. Probablement angoissés à l'idée que je leur transmette une quelconque maladie, les Phytophages disparurent.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                Je convoque les esprits de la terre pour les enchevêtrer.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        D'innombrables racines sortirent de terre et s'enlassèrent autour des jambes des Phytophages. Paniqués par ce qui leur arrivait, ils se débattaient de toutes leurs modestes forces pour rompre l'étreinte des sarments magiques. Ils ne prêtaient plus guère attention à moi et je pus me soustraire à leur regard.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    ame
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        D'infâmes racines corrompues par l'ignominie du lieu se mirent à étrangler violemment l'un des Phytophage tandis que ses comparsent tentaient vainement de l'en libérer. Me refusant à subir le même sort, je reculai lentement pour ne pas attirer l'attention et je continuai ma route dans les eaux glauques du marais.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    GnomeKill
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    ame
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                J'ai appelé la force des vents pour amplifier ma voix.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                MarshQuest0
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Le timbre grave de ma voix retentit dans le marais. Les Phytophages s'immobilisent, les jambes tremblottantes. Je hausse encore le ton en leur intimant de déguerpir. Les pauvres créatures intimidées s'exécutent aussitôt, lâchant leur arme et abandonnant leur masque.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Je m'apprêtais à vociférer mais ma gorge s'emballe et une quinte d'une toux grasse s'ensuit comme je n'en avais pas eu depuis longtemps. Les Phytophages éclatent de rire et l'un d'eux s'approche de moi, l'arme baissée. Il me tend un infâme morceau d'étoffe et dit: "chef à nous malade comme toi, trouver soin, grand rocher chemin caché par eau."
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    MarshQuest1
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+
+    </env>
+    <env>
+    <envName>
+        marsh2
+    </envName>
+    <dialogue>
+        <text>
+        Enlisée dans le sol spongieux du marécage, une bicoque miteux gisait solitaire entre les roseaux. A travers la brume, j'aperçois d'étranges totems dressés aux quatre coins de la bâtisse. Des visages moqueurs faits d'un métal ocre miroitant décorent leur sommet.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je sonde la mémoire du lieu en méditant à proximité.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        J'aperçevais en rêve des fragments du passé de la bâtisse. Quand les hommes vinrent poser les premières fondations de la demeure, les totems n'y étaient pas. Ce ne fut que des décennies plus tard qu'un humanoïde à la stature massive est venu, accompagné d'un esclave Mycellide contraint de planter pour lui ces troncs sculptés. 
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Des visions cauchemardesques s'emparèrent de mon esprit. Incapable de bouger ni d'ouvrir les yeux, je lutte pour reprendre le contrôle. Le marais est empli de souvenirs tourmentés et il parfois téméraire de vouloir consulter les âmes qui hantent ces lieux.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    ame
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                D'un geste de la main, j'abats les sinistres totems.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                ForestQuest1
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Les totems se renversaient lentement dans le sol humide. Un cri strident s'échappa de l'un des visages métalliques et mêmes mes vieilles oreilles en souffrirent le martyre. Je me saisis du masque hurlant qui semblait tout droit venu des cités enfouies des Premiers-Nés, dans le fond des bois.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    ForestQuest2
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Un rituel de protection semblait protéger les lieux et ma magie n'eut pas l'effet escompté. Alors que je tendais les mains en direction des colonnes sculptées, une voix rauque se mit à grogner dans mon esprit. Des visions d'horreur me parvenais en une succession de flashs et je j'eus d'autre choix que de m'éloigner.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                J'implore le ciel pour que la foudre frappe la cabane.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Le ciel au-dessus du marais fétide s'illumina de vifs éclairs blancs. Frappée de plein fouet, la demeure vermoulue résista, comme protégée par un pouvoir inconnu. Au loin j'entendais des gémissements de craintes. J'avais réussi à effrayer les plus cauchemardesques des créatures de ce monde.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    ame
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        En étendant mes bras vers les cieux, je sens ma colonne vertébrale craquer comme un roseau que l'on tente de briser. Seuls quelques roulements de tonnerre retentissent dans les nuages lointains. Les esprits foudroyeurs se montrèrent particulièrement capricieux et demeurèrent sourds à mon appel.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+
+    </env>
+    <env>
+    <envName>
+        marsh3
+    </envName>
+    <dialogue>
+        <text>
+        En m'aventurant entre les roseaux tourmentés, j'entendais se mêler le mugissement sinistre d'un prédateur du marais et les rythmes endiablés des tambours. Je m'approchai à pas de loup du son frénétique de la danse en essayant d'éviter le Tératomorphe qui rôdait.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je décide d'approcher la bête du marais.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Prenant mon courage à deux mains, je m'évertuais à maintenir mon regard détourné afin de ne pas voir le Tératomorphe directement en face. Ma volonté fut mise à rude épreuve mais je réussis à maintenir mon esprit dans de belles pensées. J'élevai alors mon bâton dans les airs et frappai mortellement l'innomable horreur.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    MarshBoss
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Le Tératomorphe se tenait presque immobile dans les eaux fangeuses du marais et je m'approchai lentement. Dans un mouvement brusque, elle se retourna vers moi et je sentis mon coeur m'abandonner. Lorsque son râle de cauchemar se fit entendre, je décidai d'abandonner mon entreprise sans doute trop audacieuse.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                Je prends l'apparence d'un Phytophage.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+            MarshQuest2
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Je passe inaperçu parmi les Phytophages qui semblent, pour la plupart, dans un état second. Les danses frénétiques et les battements incessants des percussions m'emportent également. J'ai fait l'erreur de goûter au bol de liqueur qu'ils faisaient circuler et j'ai vite sombré dans un sommeil cauchemardesque.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    ame
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Grâce à ma nouvelle apparence, je m'intègre aisément aux festivités. Mais mon bâton surdimensionné trahit bientôt ma véritable identité. L'un d'eux me reconnaît et jappe à mes oreilles: "médecine médecine, sinon nous manger toi". Je lui tend alors ma gourde et il me fait un geste de remerciement de la tête.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    MarshAchievement
+                </gainedAchievement>
+                <setQuestStage>
+                    MarshQuest3
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                J'écrase une effigie de paille pour créer la confusion.
+            </text>
+            <difficulty>
+                medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Tandis que les Phytophages dansaient autour d'un feu de bois humide et d'un autel sacrificiel, je fis craquer l'idole de paille que je tenais entre les mains. Brusquement les musiciens se mirent à frapper les danseurs et la festivité tourna à la foire d'empoigne. J'en ai profité pour venir subtiliser des ingrédients sur l'autel d'offrandes.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    PartyCrasher
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    Offering
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Agenouillé dans les touffes de la gâtine humide, mes rhumatismes me faisaient souffrir. J'écrase l'idole de paille entre mes doigts osseux mais je me fourvoye dans mes incantations. Aussitôt je ressens comme un frisson qui remonte dans mes cervicales. Il s'en est fallu de peu que je ne lance le sortilège sur moi-même...
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+    </env>
+    <env>
+    <envName>
+        mount1
+    </envName>
+    <dialogue>
+        <text>
+        Parvenu sur un sommet escarpé, je découvre un tumulus de pierre. Un symbole presque entièrement effacé suggère qu'une femme prestigieuse fut enterrée ici. Des crânes sculptés dans les piliers qui flanquent l'ouverture de la tombe invite à la prudence. Une malédiction règne en ces lieux. Et je me sentais observé.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je me cache derrière le tumulus et tends l'oreille alentours.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Mon intuition disait vrai, un Aéronide fourbe s'approche furtivement de l'entrée du tumulus et s'y poste en attendant ma sortie. Je profite de son inattention pour préparer un sortilège de frayeur en silence. Du bout des lèvres je prononce les mots effroyables qui font décamper la créature en toute hâte, abandonnant une gemme bleutée.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    Gem
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Je me tiens derrière le tumulus lorsque approche un Aéronide, persuadé que je me cache à l'intérieur. Mes poumons fatigués par le manque d'oxygène ne peuvent contenir une quinte de toux. L'importun s'en aperçoit et me plonge aussitôt dessus. Je parviens à le chasser mais il repart avec un trophé.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                random
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                Je transforme ma peau en pierre et provoque le rôdeur.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Un Aéronide sors de derrière le tumulus et s'approche de moi de manière confuse. Me toisant sous tous les angles, il ne comprennait pas ce que j'étais. Je le laissai alors avancer encore un peu et, au moment où il s'y attendait le moins, je l'écrase violemment en frappant mes deux paumes. Une proie des plus faciles. Quelle satisfaction !
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    HarpyKill
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    ame
+                    </type>
+                    <amount>
+                    -1
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Mon sortilège n'a hélas pas fonctionné comme prévu. Mes pieds se sont figés au sol, transformés en pierre. En panique je brandissais mon bâton, l'agitant dans tous les sens en éructant des sons pour éloigner l'Aéronide. Je ne sus pas s'il s'agissait de moquerie ou de pitié mais il s'envola loin du sommet en croassant par à-coups.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                J'illumine mon bâton pour éclairer le tumulus.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                MountQuest1
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Une vive lumière révèla l'intérieur du tumulus mais une présence lugubre semblait hanter les moindres recoins obscurs de la pièce. En me penchant sur le tombeau ouvert, je constatai que seul le crâne de la défunte s'y trouvait. Une plaque de plomb fichée dans sa mâchoire illustrait un temple circulaire surplombé d'un soleil.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Mon bâton s'illumine faiblement et projette une lumière timide dans le tumulus. Tandis que j'approche du tombeau ouvert, je sens un souffle chaud et humide effleurer ma nuque. Parmi les lugubres murmures qui troublent mon esprit, je distingue une voix féminine qui m'appelle: "Ô, grand mage, libère-moi de ma prison ardente."
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    MountQuest2
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    ame
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+    </env>
+    <env>
+    <envName>
+        mount2
+    </envName>
+    <dialogue>
+        <text>
+        J'emprunte un chemin tortueux à flanc de falaise qui grimpe à travers les bancs de nuages. Parvenu non loin d'une cascade dévalant la paroi, la voie semblait obstruée par un effrondrement de roche. J'entrevois un Aéronide dont l'une des ailes était prise au piège dans l'amoncellement de gravats.
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je transforme la bête en une autre pour la libérer.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                    Je murmure des paroles secrètes à l'Aéronide prisonnier qui aussitôt se métamorphose en un lézard de petite taille. Je ne pus dire si la bête était reconnaissante ou non car elle disparut dans le creux des roches amoncelées.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Appliquant mes mains sur le crâne de l'Aéronide, je murmure les paroles sibyllines pour le changer en un animal plus petit. Brusquement la créature ailée se transforme en un ignoble molosse écorché qui gémit à la mort. Terrifié par cette vision, je prends mes jambes à mon cou et disparais dans la montagne.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                Je ramollis la pierre pour libérer la créature.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Joignant mes deux mains au-dessus du tas de gravats, les pierres grandes et petites se mettent à fondre telles le plomb dans le feu. L'Aéronide passablement blessé se montre d'abord timide mais finalement reconnaissant. De son bec il fouille son plumage et dépose à mes pieds un pierre précieuse avant de s'échapper.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    Gem
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        L'Aéronide est terrifié de me voir arriver mais j'étends mes mains sur la pierre en psalmodiant les paroles magiques. Le tas de gravats se transforme bientôt en un amas de charbons incandescants qui consument la pauvre créature en un bref instant. Je regarde dépité la dépouille carbonisé de la bête auprès de laquelle je dépose une fleur de montagne.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    HarpyKill
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                Ignorant la créature, je me suis approché de la cascade.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                MarshQuest1
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Dissimulé derrière le flot de la cascade, une discrète ouverture dans la paroi rocheuse se dessinait. J'y suis entré prudemment et je découvris une vaste caverne couverte de cristaux multicolores. Un bassin plein d'une eau turquoise occupait son centre. Pensant aux mots des Phytophages, j'y ai puisé une dose du précieux liquide.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    MarshQuest2
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        L'eau glaciale de la cascade m'éclaboussait le visage et je peinais à voir où je mettais les pieds. Les pierres humides glissaient et, voyant le gouffre dans lequel le torrent se déversait et pensant à mon fémur fatigué, j'ai cru plus sage de ne pas me hasarder plus loin.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+    </env>
+    <env>
+    <envName>
+        mount3
+    </envName>
+    <dialogue>
+        <text>
+        Lors de mon ascension dans les hauteurs du monde, j'ai repéré un col abrupt qui avait l'air de mener au pied d'un étrange édifice reflétant la lumière du soleil. Je peinais à en déceler l'entrée jusqu'à ce que je remarque la présence d'un vénérable Lithovore, allongé non loin de là, comme endormi. 
+        </text> 
+    </dialogue>
+        <choice1>
+            <text>
+                Je traçai un glyphe dans le sol pour me téléporter.
+            </text>
+            <difficulty>
+            low
+            </difficulty>
+            <skillprice>
+                <type>
+                    ame
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                DesertQuest2
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Je me retrouvai au sommet de ce qui était de toute évidence une tour de glace. La clé d'or ailée se mit alors à battre des ailes et je m'échinais à la retenir mais elle m'attirait en direction d'un coffret couvert de givre. Je mis alors la clé dans la serrure et une eau abondante se mit à en jaillir, dévalant la montagne vers le désert.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    DesertAchievement
+                </gainedAchievement>
+                <setQuestStage>
+                    DesertQuest3
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                    Lorsque j'eus prononcé les derniers mots de mon incantation, je me retrouvai plaqué au sol à quelques pieds en contrebas, avec une vive douleur le long du nerf sciatique. La téléportation est un art délicat et je me jugeais chanceux de ne pas avoir terminé au milieu du vide. Je restai quelques instants, le temps que le mal s'apaise.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice1>
+        <!-- Choice 2 starts here -->
+        <choice2>
+            <text>
+                Je liquéfie mon corps pour ruisseler au pied de la tour.
+            </text>
+            <difficulty>
+            high
+            </difficulty>
+            <skillprice>
+                <type>
+                    corps
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Mon corps se transforme en une masse aqueuse et je parviens à échapper à la vigilance du gardien sans peine. L'édifice élancé semble être un lieu très ancien. Rien à l'intérieur ne semble avoir subsisté au passage inexorable du temps. Je reste un instant pensif avant de reprendre ma route.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- Gained AchievementID -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Formant un cercle avec mon pouce et mon index, je me transforme instantanément en une masse de glace et je dévale la pente sans le moindre contrôle de ma direction. Bien heureusement ma nouvelle forme me rendit plus résistant, sans quoi je ne serais sans doute plus. J'en restai songeur la journée durant.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    SnowBoarding
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    esprit
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice2>
+        <!-- Choice 3 starts here -->
+        <choice3>
+            <text>
+                J'allumai une flamme dans ma main pour chasser la créature.
+            </text>
+            <difficulty>
+            medium
+            </difficulty>
+            <skillprice>
+                <type>
+                    esprit
+                </type>
+                <amount>
+                    1
+                </amount>
+            </skillprice>
+            <requiredQuestStage>
+                <!-- This is the stage level of the quest required for the choice to be available -->
+            </requiredQuestStage>
+            <goodOutcome>
+                <dialogue>
+                    <text>
+                        Approchant le Lithovore avec la flamme scintillant au creux de ma paume, je le vis se relever net et tenter de m'écrabouiller de ses mains. Je rétorquai en projettant des jets de soufre en direction de sa tête. Après quelques tentatives, je finis par le blesser mortellement. Il s'effondra dans un puissant vacarme.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    MountBoss
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <gainedObject> 
+                    <!-- Gained ObjectID -->
+                </gainedObject>
+                <skillprice>
+                    <type>
+                    </type>
+                    <amount>
+                    </amount>
+                </skillprice>
+            </goodOutcome>
+            <badOutcome>
+                <dialogue>
+                    <text>
+                        Le feu qui se logeait dans le creux de ma main s'éteignit aussitôt que je voulus projeter des flammes en direction du gardien de pierre. Le Lithovore répliqua aussitôt en me projetant à terre d'un coup de pied brutal. Mon vieux corps fut tant endolori par le choc que je n'eus d'autre choix que de ramper vers un creux trop étroit pour que celui-ci puisse m'atteindre.
+                    </text>
+                </dialogue>
+                <gainedAchievement> 
+                    <!-- This might be an achievement you get -->
+                </gainedAchievement>
+                <setQuestStage>
+                    <!-- This is the evolution of the questline -->
+                </setQuestStage>
+                <lostObject> 
+                </lostObject>
+                <skillprice>
+                    <type>
+                    corps
+                    </type>
+                    <amount>
+                    1
+                    </amount>
+                </skillprice>
+            </badOutcome>
+        </choice3>
+    </env>
+</envs>
