@@ -19,6 +19,8 @@ public class ChoiceDialogue : MonoBehaviour
 
     private Dictionary<string, Dictionary<string, string>> tileDialogueDict;
 
+    private UnityAction choice1Action, choice2Action, choice3Action, m_MyFirstAction, endAction;
+    private Button c1textButton, c2textButton, c3textButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,22 @@ public class ChoiceDialogue : MonoBehaviour
 
         // Deactivate object
         gameObject.SetActive(false);
+
+
+        // Get buttons
+        c1textButton = c1text.gameObject.transform.parent.GetComponent<Button>();
+        c2textButton = c2text.gameObject.transform.parent.GetComponent<Button>();
+        c3textButton = c3text.gameObject.transform.parent.GetComponent<Button>();
+
+        // Create actions
+        choice1Action += Choice1;
+        choice2Action += Choice2;
+        choice3Action += Choice3;
+
+        // Add actions to buttons
+        c1textButton.onClick.AddListener(choice1Action);
+        c2textButton.onClick.AddListener(choice2Action);
+        c3textButton.onClick.AddListener(choice3Action);
     }
 
     // Update is called once per frame
@@ -150,18 +168,12 @@ public class ChoiceDialogue : MonoBehaviour
     }
 
 
-    private UnityAction choice1Action, choice2Action, choice3Action, m_MyFirstAction, endAction;
-
     // Unlock actions that were locked during dialogue
     private void AllowActions()
     {
         Debug.Log("Allow action");
         // Show choices
         ShowOptions();
-
-        Button c1textButton = c1text.gameObject.transform.parent.GetComponent<Button>();
-        Button c2textButton = c2text.gameObject.transform.parent.GetComponent<Button>();
-        Button c3textButton = c3text.gameObject.transform.parent.GetComponent<Button>();
 
         //////////////////////////////////////////// Done ////////////////////////////////////////////
         // Check for each choice if required_quest_stage >= ForestQuest0
@@ -255,14 +267,6 @@ public class ChoiceDialogue : MonoBehaviour
             c3textButton.enabled = true;
             c3textButton.GetComponent<Image>().color = whiteColor;
         }
-
-        choice1Action += Choice1;
-        choice2Action += Choice2;
-        choice3Action += Choice3;
-
-        c1textButton.onClick.AddListener(choice1Action);
-        c2textButton.onClick.AddListener(choice2Action);
-        c3textButton.onClick.AddListener(choice3Action);
     }
 
     private void HideOptions()
