@@ -103,6 +103,7 @@ public class ChoiceDialogue : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
+            Debug.Log("Start coroutine type line");
             StartCoroutine(TypeLine());
         }
         else
@@ -193,6 +194,13 @@ public class ChoiceDialogue : MonoBehaviour
                 c1textButton.GetComponent<Image>().color = blackColor;
             }
         }
+        else
+        {
+            Debug.Log("No requirements for C1");
+
+            c1textButton.enabled = true;
+            c1textButton.GetComponent<Image>().color = whiteColor;
+        }
 
         if (!string.IsNullOrWhiteSpace(c2requirement))
         {
@@ -213,6 +221,13 @@ public class ChoiceDialogue : MonoBehaviour
                 c2textButton.GetComponent<Image>().color = blackColor;
             }
         }
+        else
+        {
+            Debug.Log("No requirements for C2");
+
+            c2textButton.enabled = true;
+            c2textButton.GetComponent<Image>().color = whiteColor;
+        }
 
         if (!string.IsNullOrWhiteSpace(c3requirement))
         {
@@ -232,6 +247,13 @@ public class ChoiceDialogue : MonoBehaviour
                 c3textButton.enabled = false;
                 c3textButton.GetComponent<Image>().color = blackColor;
             }
+        }
+        else
+        {
+            Debug.Log("No requirements for C3");
+
+            c3textButton.enabled = true;
+            c3textButton.GetComponent<Image>().color = whiteColor;
         }
 
         choice1Action += Choice1;
@@ -324,12 +346,15 @@ public class ChoiceDialogue : MonoBehaviour
         switch(skillType)
         {
             case "ame":
+            case "soul": // Would be better to translate xml directly, remains as /////////// TODO ///////////
                 LevelVariables.Instance().RemoveSoul(skillAmount);
                 break;
             case "corps":
+            case "body":
                 LevelVariables.Instance().RemoveBody(skillAmount);
                 break;
             case "esprit":
+            case "mind":
                 LevelVariables.Instance().RemoveMind(skillAmount);
                 break;
             default:
@@ -464,13 +489,13 @@ public class ChoiceDialogue : MonoBehaviour
 
         textComponent.text = string.Empty;
 
-        Debug.Log("Write final textttttttttttttttttttttttt.............");
-        Debug.Log("Write final textttttttttttttttttttttttt.............");
+        // Debug.Log("Write final textttttttttttttttttttttttt.............");
+        // Debug.Log("Write final textttttttttttttttttttttttt.............");
         Debug.Log("Write final textttttttttttttttttttttttt.............");
         writingFinal = true;
-        foreach (string l in lines) {
-            Debug.Log(l);
-        }
+        // foreach (string l in lines) {
+        //     Debug.Log(l);
+        // }
 
         StartCoroutine(TypeFinalLine());
     }
