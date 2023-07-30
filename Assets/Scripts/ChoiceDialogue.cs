@@ -70,10 +70,22 @@ public class ChoiceDialogue : MonoBehaviour
             {
                 if (!endedFinal)
                 {
-                  //StopAllCoroutines();  // Do not allow (for now)
-                  //textComponent.text = lines[index];
-                  //endedFinal = true;
-                  Debug.Log("Update 1");
+                    //StopAllCoroutines();  // Do not allow (for now)
+                    //textComponent.text = lines[index];
+                    //endedFinal = true;
+                    Debug.Log("Update 1");
+                    if (textComponent.text == lines[index])
+                    {
+                      Debug.Log("Update 1.1");
+                      NextFinalLine();
+                    }
+                    else
+                    {
+                      Debug.Log("Update 1.2");
+                      StopAllCoroutines();
+                      textComponent.text = lines[index];
+                      endedFinal = true;
+                    }
                 }
                 else
                 {
@@ -127,11 +139,30 @@ public class ChoiceDialogue : MonoBehaviour
         else
         {
             index = 0;
-            writingFinal = true;
+            // writingFinal = true;
             //gameObject.SetActive(false);
             StopAllCoroutines();
             AllowActions();
         }
+    }
+
+
+    void NextFinalLine()
+    {
+        // if (index < lines.Length -1)  // No need, only 1 final line
+        // {
+        //     index++;
+        //     textComponent.text = string.Empty;
+        //     Debug.Log("Start coroutine type line");
+        //     StartCoroutine(TypeLine());
+        // }
+        // else
+        // {
+            index = 0;
+            endedFinal = true;
+            //gameObject.SetActive(false);
+            StopAllCoroutines();
+        // }
     }
 
     public void NewDialogue(Dictionary<string, Dictionary<string, string>> dialogueDict)
@@ -516,19 +547,19 @@ public class ChoiceDialogue : MonoBehaviour
     IEnumerator TypeFinalLine()
     {
         // Dialogue
-        // foreach (char c in lines[index].ToCharArray())
-        // {
-        //     textComponent.text += c;
-        //     yield return new WaitForSeconds(textSpeed);
-        // }
+        foreach (char c in lines[index].ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
 
         //////////////// Hard fix of the problem ////////
         //////////////// BUG ////////////////
         // When iterating, from the second tile it will write multiple time each char
         // For now just put entire text directly
-        textComponent.text = lines[0];
-        endedFinal = true;
-        yield return true;
+        // textComponent.text = lines[0];
+        // endedFinal = true;
+        // yield return true;
     }
 
 }
