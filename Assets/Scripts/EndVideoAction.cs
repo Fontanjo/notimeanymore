@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class EndVideoAction : MonoBehaviour
 {
+
+    public Button SkipVideoButton;
+
     VideoPlayer videoPlayer;
 
     // Start is called before the first frame update
@@ -15,11 +19,6 @@ public class EndVideoAction : MonoBehaviour
         videoPlayer.loopPointReached += EndReached;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
@@ -28,5 +27,14 @@ public class EndVideoAction : MonoBehaviour
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("MapScene");
     }
+
+
+    public void GoToFinalFrames()
+    {
+        // TODO stop music
+        videoPlayer.frame = 800;
+    }
+
+
 
 }

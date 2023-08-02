@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{99323ec4-1dcc-4d7c-b891-2465bed62aff}">
+		<property name="assetPath">
+			<value>ONE SHOTS/Resurection/SGA23_Resurection_6.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1320861678004535</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b0e3d5d5-8038-4988-8385-843a4d74b79f}</destination>
+		</relationship>
+	</object>
+</objects>

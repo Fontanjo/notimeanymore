@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4a61c848-9609-4e9f-8de6-c5c1f2f2c017}">
+		<property name="assetPath">
+			<value>MORT/SGA23_MortBof.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>43.200000000000003</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b0e3d5d5-8038-4988-8385-843a4d74b79f}</destination>
+		</relationship>
+	</object>
+</objects>
