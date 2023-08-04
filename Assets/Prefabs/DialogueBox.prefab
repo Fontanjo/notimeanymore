@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 7487473428765220055}
   - component: {fileID: 7487473428765220054}
   - component: {fileID: 7552363284879467569}
-  - component: {fileID: 1410113548}
-  - component: {fileID: 1410113552}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -97,68 +95,6 @@ MonoBehaviour:
   - Hello in the game
   textSpeed: 0
   allowAfter: []
---- !u!114 &1410113548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7487473428765220051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 943623808
-      Data2: 1095517240
-      Data3: 135357599
-      Data4: -1967629258
-    Path: event:/Loop 1
-  Event: 
-  PlayEvent: 1
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &1410113552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7487473428765220051}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 433174123
-      Data2: 1161994609
-      Data3: 1111033993
-      Data4: 1963241641
-    Path: event:/Harp 1
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &7487473429023030809
 GameObject:
   m_ObjectHideFlags: 0

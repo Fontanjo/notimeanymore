@@ -303,6 +303,29 @@ public class LevelVariables
 
 
 
+            string ForestQuest = "0";
+            // currentCount will be zero if the key id doesn't exist
+            questStagesDict.TryGetValue("ForestQuest", out ForestQuest);
+            GlobalVariables.Set("ForestQuest", ForestQuest);
+
+            string DesertQuest = "0";
+            // currentCount will be zero if the key id doesn't exist
+            questStagesDict.TryGetValue("DesertQuest", out DesertQuest);
+            GlobalVariables.Set("DesertQuest", DesertQuest);
+
+            string MountQuest = "0";
+            // currentCount will be zero if the key id doesn't exist
+            questStagesDict.TryGetValue("MountQuest", out MountQuest);
+            GlobalVariables.Set("MountQuest", MountQuest);
+
+            string MarshQuest = "0";
+            // currentCount will be zero if the key id doesn't exist
+            questStagesDict.TryGetValue("MarshQuest", out MarshQuest);
+            GlobalVariables.Set("MarshQuest", MarshQuest);
+
+
+
+
             // Save all necessary infos
             Debug.Log("You died!######################################");
             UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
@@ -382,7 +405,7 @@ public class LevelVariables
         // Probably one of the ugliest part of the code
         if (questStageName[0] == 'F')
         {
-            return "ForesQuest";
+            return "ForestQuest";
         }
 
         if (questStageName[0] == 'D')

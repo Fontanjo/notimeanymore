@@ -9,8 +9,6 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textSpeed;
 
-
-
     public string[] allowAfter;
 
     private int index;
@@ -19,9 +17,20 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         textComponent.text = string.Empty;
+
+        // Get loaded text if possible
+        string initialText = "";
+        LevelGenerator.GetTextDataDict().TryGetValue("intro", out initialText);
+        string[] intro = {initialText};
+
+        // Set new intro message
+        lines = intro;
+
+
         // Start first dialogue
         StartDialogue();
     }
+
 
     // Update is called once per frame
     void Update()

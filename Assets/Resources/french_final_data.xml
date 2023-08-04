@@ -1,5 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <envs>
+  <others>
+    <intro>
+        En ouvrant les yeux, mon vieux corps me fit sentir que le temps pressait. Il me fallut à nouveau trouver mon chemin et veiller à ce que mes réserves ne s'épuisent pas trop vite. Je repris la route, convaincu que, cette fois-ci, je parviendrais à corriger la légende de ma vie.
+    </intro>
+    <end>
+        <leftIntro>
+            Ainsi s'ouvre ma légende, une aventure faite d'expéditions périlleuses et de rencontres mortelles.
+        </leftIntro>
+        <rightIntro>
+            Au fil de mon chemin, j'ai été le héros de nombreuses quêtes glorieuses et de quelques histoires farfelues.
+        </rightIntro>
+        <leftForest>
+            Dans les forêtes, j'ai vaincu des Mycellides, des Premiers-Nés et y ai collecté d'anciennes reliques.
+        </leftForest>
+        <leftMarsh>
+            Au fond des marais, j'ai terrassé des Phytophages, des Cauchemars et j'ai récupéré leurs viles offrendes.
+        </leftMarsh>
+        <leftDesert>
+            Au milieu des déserts, j'ai pourfendu des Troglodytes, des Voreciptères et y ai trouvé des anciens textes.
+        </leftDesert>
+        <leftMount>
+            Au sommets du monde, j'ai survécu aux Aérenides, au Gardiens et me suis chargé les mains de gemmes.
+        </leftMount>
+        <getHigh>
+            Je me suis intoxiqué aux spores.
+        </getHigh>
+        <partyCrasher>
+            J'ai interrompu une fête dans les flammes.
+        </partyCrasher>
+        <sunBathing>
+            J'ai manqué de peu de rôtir au soleil.
+        </sunBathing>
+        <snowBoarding>
+            J'ai dégringolé des montagnes pentues.
+        </snowBoarding>
+        <forestQuest>
+            J'ai vaincu un maléfique Premier-Nés, tourmenteur des Mycellides.
+        </forestQuest>
+        <marshQuest>
+            J'ai délivré le chef des Phytophages du mal dont il souffrait.
+        </marshQuest>
+        <desertQuest>
+            J'ai redonné aux peuples du désert une source d'eau fraîche.
+        </desertQuest>
+        <mountQuest>
+            J'ai malencontreusement libéré l'esprit vengeur d'une reine maudite.
+        </mountQuest>
+    </end>
+  </others>
   <env>
     <envName>
         forest1

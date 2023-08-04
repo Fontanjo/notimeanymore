@@ -53,6 +53,8 @@ public class LevelGenerator : MonoBehaviour
 
     private static Dictionary<string, Dictionary<string, Dictionary<string, string>>> dialoguesDataDict;
 
+    private static Dictionary<string, string> textDataDict = new Dictionary<string, string>();
+
     /// Start is called before the first frame update
     /// Generate first 3 layers, and keep track of the root node
     void Start()
@@ -311,6 +313,18 @@ public class LevelGenerator : MonoBehaviour
         return dialoguesDataDict;
     }
 
+
+    // Set text data
+    public static void SetTextDataDict(Dictionary<string, string> dict)
+    {
+        textDataDict = dict;
+    }
+
+    // Get text data dict
+    public static Dictionary<string, string> GetTextDataDict()
+    {
+        return textDataDict;
+    }
 
     // public void ReallowVariable(bool variable)
     // {

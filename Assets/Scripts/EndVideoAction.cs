@@ -32,7 +32,18 @@ public class EndVideoAction : MonoBehaviour
     public void GoToFinalFrames()
     {
         // TODO stop music
-        videoPlayer.frame = 800;
+
+        // Check if video has started (actually if it has loaded correctly)
+        if (videoPlayer.frame > 0)
+        {
+            videoPlayer.frame = 800;
+            SkipVideoButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MapScene");
+        }
+        
     }
 
 

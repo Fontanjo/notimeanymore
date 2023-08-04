@@ -325,15 +325,14 @@ VideoPlayer:
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 2
   m_AspectRatio: 2
-  m_DataSource: 1
+  m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 0
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file:///home/jonas/Documents/ProjectsUnity/notimeanymore/Assets/Video/Les
-    Rudes Sentiers de la Gloire - Teaser - vorbis.webm
+  m_Url: https://www.youtube.com/watch?v=9th-aJbH8Co
   m_EnabledAudioTracks: 00
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -370,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a03ffa9f12a26feab1af3cc75e6178f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkipVideoButton: {fileID: 0}
+  SkipVideoButton: {fileID: 1337961867}
 --- !u!114 &288337255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,7 +646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Skip Intro
+  m_text: Start game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ee51b7853b0a63cc9307214ddf249d6, type: 2}
   m_sharedMaterial: {fileID: -5552720058646039948, guid: 4ee51b7853b0a63cc9307214ddf249d6, type: 2}

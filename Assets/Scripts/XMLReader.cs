@@ -10,7 +10,7 @@ public class XMLReader : MonoBehaviour
     public TextAsset textAsset;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         LoadExternalText();
     }
@@ -100,6 +100,22 @@ public class XMLReader : MonoBehaviour
         {
             Debug.LogWarning("No 'env' nodes found in the XML");
         }
+
+
+        Dictionary<string, string> othersDict = new Dictionary<string, string>();
+
+        // Get root of other nodes
+        XmlNode othersNode = rootNode.SelectSingleNode("others");
+
+
+        string introText = othersNode.SelectSingleNode("intro").InnerText.Trim();
+
+        othersDict.Add("intro", introText);
+
+
+        LevelGenerator.SetTextDataDict(othersDict);
+
+
     }
 
     private int LoadInt(XmlNode node, string tag, int defaultVal)
