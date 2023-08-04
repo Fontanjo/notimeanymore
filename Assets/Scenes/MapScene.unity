@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165662515}
   - component: {fileID: 165662514}
+  - component: {fileID: 165662516}
   m_Layer: 0
   m_Name: FModEmitter
   m_TagString: Untagged
@@ -292,6 +293,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &165662516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165662513}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be423736ceef16e4adafa0cdcf15632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &200411032 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7487473428765220048, guid: ba909c617af27e42aa329977fc0c1032, type: 3}
@@ -1723,9 +1736,9 @@ MonoBehaviour:
   BodyPanelText: {fileID: 519421517}
   SoulPanelText: {fileID: 778912564}
   MindPanelText: {fileID: 795204000}
-  InitialBodySkills: 2
-  InitialSoulSkills: 2
-  InitialMindSkills: 2
+  InitialBodySkills: 5
+  InitialSoulSkills: 5
+  InitialMindSkills: 5
 --- !u!4 &2068068991
 Transform:
   m_ObjectHideFlags: 0

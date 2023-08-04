@@ -3,18 +3,16 @@
 [LOG] SystemI::init                            : Initialize version=20215 (134211), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD PulseAudio Output'
 [LOG] OutputPulseAudio::registerLib            : Loaded PulseAudio version 15.99.0.
-[LOG] PulseAudio_EnumOutputCallback            : Found output device NAME:alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1 DESC:GA104 High Definition Audio Controller Digital Stereo (HDMI 2) CHANNELS:2 RATE:44100.
+[LOG] PulseAudio_EnumOutputCallback            : Found output device NAME:alsa_output.pci-0000_01_00.1.hdmi-stereo DESC:GA104 High Definition Audio Controller Digital Stereo (HDMI) CHANNELS:2 RATE:48000.
 [LOG] PulseAudio_EnumOutputCallback            : Found output device NAME:alsa_output.usb-Generic_USB_Audio-00.iec958-stereo DESC:USB Audio Digital Stereo (IEC958) CHANNELS:2 RATE:44100.
-[LOG] PulseAudio_EnumOutputCallback            : Found output device NAME:bluez_sink.E8_EE_CC_6E_BA_08.a2dp_sink DESC:soundcore Space Q45 CHANNELS:2 RATE:44100.
-[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_output.pci-0000_01_00.1.hdmi-stereo-extra1.monitor DESC:Monitor of GA104 High Definition Audio Controller Digital Stereo (HDMI 2) CHANNELS:2 RATE:44100.
+[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor DESC:Monitor of GA104 High Definition Audio Controller Digital Stereo (HDMI) CHANNELS:2 RATE:48000.
 [LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_output.usb-Generic_USB_Audio-00.iec958-stereo.monitor DESC:Monitor of USB Audio Digital Stereo (IEC958) CHANNELS:2 RATE:44100.
 [LOG] PulseAudio_EnumInputCallback             : Found input device NAME:alsa_input.usb-Generic_USB_Audio-00.iec958-stereo DESC:USB Audio Digital Stereo (IEC958) CHANNELS:2 RATE:44100.
-[LOG] PulseAudio_EnumInputCallback             : Found input device NAME:bluez_sink.E8_EE_CC_6E_BA_08.a2dp_sink.monitor DESC:Monitor of soundcore Space Q45 CHANNELS:2 RATE:44100.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
 [LOG] FMOD_OS_Thread_Callback                  : Cannot set real-time thread priorities due to insufficient privileges
-[LOG] AsyncManager::init                       : manager 0x55d5778171a8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x562209449bd8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.

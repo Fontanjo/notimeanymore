@@ -510,11 +510,11 @@ public class ChoiceDialogue : MonoBehaviour
         // Write outcome message
         if (succeeded)
         {
-            finalMessage = tileDialogueDict["choice1"]["goodDialogueText"];
+            finalMessage = tileDialogueDict[choiceCode]["goodDialogueText"];
         }
         else
         {
-            finalMessage = tileDialogueDict["choice1"]["badDialogueText"];
+            finalMessage = tileDialogueDict[choiceCode]["badDialogueText"];
         }
 
         string[] newLine = {finalMessage};
