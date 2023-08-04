@@ -108,6 +108,7 @@ public class PrintGlobalInfo : MonoBehaviour
     private void SetKills()
     {
         int MushroomKill = GlobalVariables.Get<int>("MushroomKill");
+        Debug.Log(MushroomKill);
         MushroomKillTxt.text = "" + MushroomKill;
         if (MushroomKill > minimumToShow)
         {

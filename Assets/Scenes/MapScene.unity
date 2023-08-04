@@ -1723,9 +1723,9 @@ MonoBehaviour:
   BodyPanelText: {fileID: 519421517}
   SoulPanelText: {fileID: 778912564}
   MindPanelText: {fileID: 795204000}
-  InitialBodySkills: 5
-  InitialSoulSkills: 5
-  InitialMindSkills: 5
+  InitialBodySkills: 2
+  InitialSoulSkills: 2
+  InitialMindSkills: 2
 --- !u!4 &2068068991
 Transform:
   m_ObjectHideFlags: 0
